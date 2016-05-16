@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+    <title>OVS Orbit</title>
+    <link>${baseurl}/</link>
+    <description>Interviews and topics of interest to Open vSwitch developers and users, hosted by Ben Pfaff.</description>
+    <atom:link href="${baseurl}/rss.xml" rel="self"/>
+    <language>en-us</language>
+    <managingEditor>blp@ovn.org (Ben Pfaff)</managingEditor>
+    <image>
+      <url>${baseurl}/orbit_144x144.png</url>
+      <title>OVS Orbit</title>
+      <link>${baseurl}/</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+    <webMaster>blp@ovn.org (Ben Pfaff)</webMaster>
+    <itunes:category text="Technology">
+      <itunes:category text="Software How-To"/>
+    </itunes:category>
+    <itunes:owner>
+      <itunes:name>Ben Pfaff</itunes:name>
+      <itunes:email>blp@ovn.org</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:block>No</itunes:block>
+    <itunes:image href="${baseurl}/orbit_300x300.png"/>
+    <itunes:summary>Interviews and topics of interest to Open vSwitch developers and users.</itunes:summary>
+    <itunes:author>Ben Pfaff</itunes:author>
+    <copyright>Licensed under a Creative Commons Attribution 3.0 Unported License.</copyright>
+  </channel>
+</rss>

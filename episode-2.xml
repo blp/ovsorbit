@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 2: Dave Neary</title>
+  <description>
+    <p>
+      Interview with Dave Neary of Red Hat, concerning OPNFV and its
+      relationship with Open vSwitch.
+    </p>
+
+    <p>
+      Topics include:
+    </p>
+
+    <ul>
+      <li>The difference between SFC and NFV.</li>
+
+      <li>Importance performance constraints in NFV.</li>
+
+      <li>Telcos and NFV, and how telcos approached OpenStack.</li>
+
+      <li>How OPNFV bridges the telcos with OpenStack.</li>
+
+      <li>What telcos care about, and a definition of ``carrier grade.''</li>
+
+      <li>Why carrier-grade features matter to everyone.</li>
+
+      <li>Downsides and tradeoffs of carrier grade, such as cost and
+      complexity.</li>
+
+      <li>Role of Open vSwitch in OPNFV, and why DPDK is important to NFV.</li>
+
+      <li>Importance of short 64-byte packets in NFV, e.g. for RTP (Real-time
+      Transport Protocol, for delivering audio and video across networks).</li>
+
+      <li>Relationship between SIP and RTP.</li>
+
+      <li>Status of DPDK datapath in OVS for OPNFV (still under OpenStack review
+      and in early evaluation, not running in production much).</li>
+
+      <li>Importance of <code>vhost-user</code> for NFV.</li>
+
+      <li>Why DPDK API/ABI changes cause trouble for Open vSwitch and downstream
+      users, and how symbol versioning in DPDK 2 and later helps.</li>
+
+      <li>Problems caused by irregularly scheduled Open vSwitch 2.4 and 2.5
+      releases.</li>
+
+      <li>Intent to branch OVS 2.6 in July.</li>
+
+      <li>SFC for OPNFV demo with Tacker.</li>
+
+      <li>Progress toward NSH support in OVS, and why OVS support for Geneve should
+      make it easier now.</li>
+
+      <li>Geneve standardization progress.</li>
+
+      <li>OpenFlow matching for service chains.</li>
+
+      <li>Potential pros and cons of NSH and Geneve for service chaining.</li>
+
+      <li>VPP and OPNFV, and guesses at pros and cons of VPP versus OVS for
+      different application.</li>
+
+      <li>Why Dave is excited about OPNFV.</li>
+    </ul>
+  </description>
+<pubDate>Wed, 04 May 2016 05:55:44 GMT</pubDate>
+</item>

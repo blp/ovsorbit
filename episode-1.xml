@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+<title>Episode 1: Alessandro Pilotti</title>
+<description>
+  <p>
+    An interview with Alessandro Pilotti of Cloudbase, which Alessandro
+    describes as the company that takes care of everything related to
+    Microsoft technologies in OpenStack.  The interview focuses on the
+    Open vSwitch port to Hyper-V, to which Cloudbase is a top contributor.
+  </p>
+
+  <p>Highlights and topics in this episode include:</p>
+  <ul>
+    <li>An overview of what Cloudbase does and what it works on in OpenStack.</li>
+    <li>Why Cloudbase started their Open vSwitch port to Hyper-V.</li>
+    <li>History of the VMware and Cloudbase ports to Hyper-V and how they
+    were merged into upstream Open vSwitch.</li>
+    <li>Alessandro's thoughts on how to favoring a user experience familiar to
+    Windows admins versus one familiar to user who know Open vSwitch from
+    other platforms.</li>
+    <li>Perspectives on collaboration in the Hyper-V port development.</li>
+    <li>The native Hyper-V switch versus Open vSwitch.</li>
+    <li>Ben's anecdote about a surprising conference call with Microsoft
+    back in 2011.</li>
+    <li>Alessandro educates Ben about Ubuntu on Windows</li>
+    <li>How port names are handled in Windows.</li>
+    <li>Status of the Hyper-V port and how it's being used</li>
+    <li>Upcoming features for the Hyper-V port, such as connection tracking bsed
+    firewalling ("conntrack").</li>
+    <li>OVN on Hyper-V.</li>
+    <li>Alessandro's role as CEO at Cloudbase and how he gets involved in the
+    technical side of projects.</li>
+    <li>How Cloudbase attracts employees, via internships from local universities.</li>
+    <li>Continuous integration for OpenStack on Hyper-V.</li>
+    <li>Special challenges of projects with a kernel component.</li>
+  </ul>
+</description>
+<pubDate>Sun, 01 May 2016 05:43:13 GMT</pubDate>
+</item>

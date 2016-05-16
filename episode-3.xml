@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 3: Chad Norgan</title>
+  <description>
+    <p>
+      Interview with Chad Norgan of Rackspace, about use of Open vSwitch at
+      Rackspace over the years.
+    </p>
+
+    <p>
+      Topics include:
+    </p>
+
+    <ul>
+      <li>
+        Chad's role at Rackspace and what he spends his time on.
+      </li>
+
+      <li>
+        Shifts in where he spends his time as Open vSwitch has matured.
+      </li>
+
+      <li>
+        Experiments with buying and writing SDN controllers and OpenFlow flows
+        at Rackspace, including a Ryu-based chassis controller.
+      </li>
+
+      <li>
+        SDN in two generations of Rackspace cloud, with NVP in the second
+        generation.
+      </li>
+
+      <li>
+        Tracing datapath flows using tools in Open vSwitch, using
+        ``<code>ovs-appctl ofproto/trace</code>'', and the value of tracing for
+        debugging a running system.
+      </li>
+
+      <li>
+        Suggestions for improving ``<code>ovs-appctl ofproto/trace</code>''.
+      </li>
+
+      <li>
+        Usefulness of Open vSwitch logging.
+      </li>
+
+      <li>
+        Significant performance improvements since earlier versions, such as
+        moving logging out of the main thread, megaflows, and eviction
+        handling.
+      </li>
+
+      <li>
+        Potential appliance use of DPDK, contrasted against downside for
+        hypervisors of losing a core.
+      </li>
+
+      <li>
+        Thoughts about importance of 64-byte packet performance in Rackspace
+        environment, and potential of eBPF work going on at Cisco to help with
+        that.
+      </li>
+
+      <li>
+        Performance history of Open vSwitch versions as perceived by Nicira and
+        Rackspace, and its evolution over time as Open vSwitch was exposed to
+        more and more diverse production use cases.
+      </li>
+
+      <li>
+        Open vSwitch decision for version 1.11 to completely rewrite everything
+        in terms of megaflows, to achieve reasonable performance in important
+        minority of cases.
+      </li>
+
+      <li>
+        Chad's presentation on Open vSwitch performance at the <a
+        href="http://openvswitch.org/support/ovscon2014/">Open vSwitch 2014
+        Fall Conference</a>.
+      </li>
+
+      <li>
+        Open vSwitch as the ``incumbent'' virtual switch.
+      </li>
+
+      <li>
+        Generating good representative traffic for testing.
+      </li>
+
+      <li>
+        Ixia hardware for predictable traffic generation, removing a variable
+        from the testing equation.
+      </li>
+
+      <li>
+        Desire for a physical hardware switch with the flexibility of Open
+        vSwitch, with P4 switches as a possible route there.
+      </li>
+
+      <li>
+        ``<code>ovsdb-tool -mmm show-log</code>'' as database debugging tool.
+      </li>
+    </ul>
+
+    <p>
+      Chad can be contacted at <a
+      href="https://twitter.com/chadnorgan">@chadnorgan</a> on Twitter, as
+      BeardyMcBeard on the <a href="http://freenode.net">freenode</a> IRC
+      network
+    </p>
+  </description>
+<pubDate>Sun, 08 May 2016 21:25:52 GMT</pubDate>
+</item>
