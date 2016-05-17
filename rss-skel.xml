@@ -8,11 +8,11 @@
     <language>en-us</language>
     <managingEditor>blp@ovn.org (Ben Pfaff)</managingEditor>
     <image>
-      <url>${baseurl}/orbit_144x144.png</url>
+      <url>${baseurl}/orbit_1500x1500.png</url>
       <title>OVS Orbit</title>
       <link>${baseurl}/</link>
-      <width>144</width>
-      <height>144</height>
+      <width>1500</width>
+      <height>1500</height>
     </image>
     <webMaster>blp@ovn.org (Ben Pfaff)</webMaster>
     <itunes:category text="Technology">
