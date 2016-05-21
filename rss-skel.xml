@@ -24,7 +24,7 @@
     </itunes:owner>
     <itunes:explicit>No</itunes:explicit>
     <itunes:block>No</itunes:block>
-    <itunes:image href="${baseurl}/orbit_300x300.png"/>
+    <itunes:image href="${baseurl}/orbit_1500x1500.png"/>
     <itunes:summary>Interviews and topics of interest to Open vSwitch developers and users.</itunes:summary>
     <itunes:author>Ben Pfaff</itunes:author>
     <copyright>Licensed under a Creative Commons Attribution 3.0 Unported License.</copyright>
