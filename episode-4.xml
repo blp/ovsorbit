@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 4: Thomas Graf from Cisco</title>
+  <description>
+    <p>
+      Interview with Thomas of Cisco, regarding the Cilium project.
+    </p>
+
+    <p>
+      Cilium is a ``science project'' that Thomas and others at Cisco and
+      elsewhere are hacking on, to address the question of how to address
+      policy in a legacy-free container environment that scales to millions of
+      endpoints.  It's an experiment because the outcome isn't yet certain, and
+      it's a question that hasn't seen much work outside of hyperscale
+      providers.
+    </p>
+
+    <p>
+      Cilium is based on <a href="https://lwn.net/Articles/603983/">eBPF</a>, a
+      Linux kernel technology that introduces the ability for userspace to
+      inject custom programs into the kernel using a bytecode analogous to Java
+      virtual machine bytecode.  Cilium uses eBPF-based hooks can intercept
+      packets at various places in their path through the kernel to implement a
+      flexible policy engine.
+    </p>
+
+    <p>
+      Topics include:
+    </p>
+
+    <ul>
+      <li> 
+        How Chris Wright encouraged Thomas to become involved with Open
+        vSwitch, when Thomas was at Red Hat.
+      </li>
+
+      <li>
+        The important differences between containers and VMs (quantity,
+        duration of workloads, and frequency of state changes) and how Cilium
+        addresses these issues.
+      </li>
+
+      <li>
+        The toolchain that Cilium uses to generate a eBPF program customized
+        for the policy of each container in a minimal and complete way.
+      </li>
+
+      <li>
+        The potential to bypass kernel <code>sk_buff</code> overhead by
+        intercepting packets before these data structures are constructed, via
+        Express Data Path (XDP), leading to the potential for DPDK-like packet
+        forwarding performance without ever leaving the kernel.  What's the
+        drawback?  We don't know yet how it will play out.
+      </li>
+
+      <li>
+        The main benefit of getting XDP-based early access to packets is to
+        avoid the main Linux networking code paths, which are optimized for
+        delivery to socket buffers (taking advantage of segmentation offload)
+        as opposed to forwarding.
+      </li>
+
+      <li>
+        Dropping packets quickly is important because many operators are under
+        attack all the time.
+      </li>
+
+      <li>
+        Importance of performance for small and large packets.
+      </li>
+
+      <li>
+        Languages available for writing eBPF: C via LLVM/Clang and Python
+        (among others?).
+      </li>
+
+      <li>
+        Limitations due to the verifier (primarily restrictions on loops), and
+        how to work around them.
+      </li>
+
+      <li>
+        How Cilium generates its eBPF programs: a base C program, plus an agent
+        in Go that generates a C header file.  Cilium compiles the C program to
+        eBPF bytecode, using LLVM, then loads it into the running kernel with
+        the <code>tc</code> utility.
+      </li>
+
+      <li>
+        Potential for difficulty in getting a compiler toolchain into
+        production deployments.  Is the simplicity of supplying Cilium as a
+        container image that builds in the toolchain an advantage?
+      </li>
+
+      <li>
+        How often eBPF programs need to be recompiled in Cilium.
+      </li>
+
+      <li>
+        eBPF ``map'' data structures that can be shared among eBPF programs,
+        the rest of the kernel, and userspace.
+      </li>
+
+      <li>
+        Policy in Cilium.  The basic idea is that whoever specifies Cilium
+        policy should not have to understand traditional networking concepts
+        like IP addresses ands port.  Instead, abstract labels specify which
+        classes of containers can talk to each other.
+      </li>
+
+      <li>
+        Lessons learned from policy in Cilium.
+      </li>
+
+      <li>
+        How Cilium does datapath packet processing, how it passes labels from
+        source to destination, and where it applies policy.
+      </li>
+
+      <li>
+        The direction in which Cilium points for eBPF support in Open vSwitch:
+        first, it shows that it is possible; second, it shows that the tracing
+        buffer mechanism available from eBPF is a potential replacement for
+        Open vSwitch ``upcalls'' currently implemented via Netlink; third, it
+        points out an alternative for the flow-based model.  (Does it makes
+        sense to implement OVN directly via code generation?)
+      </li>
+
+      <li>
+        Connection tracking in eBPF.
+      </li>
+
+      <li>
+        eBPF helper functions in Linux, and the limitations of the current
+        ones.
+      </li>
+
+      <li>
+        Potential for applying eBPF to other targets such as DPDK or the OVS
+        port to Hyper-V.
+      </li>
+
+      <li>
+        Performance penalty for eBPF versus native code.
+      </li>
+
+      <li>
+        Early controversy in the kernel community over eBPF when it was
+        introduced.
+      </li>
+
+      <li>
+        What's next for Cilium: load balancing, IPsec, IPv4 .
+      </li>
+    </ul>
+
+    <p>
+      You can find Thomas on the <a
+      href="http://openvswitch.org/mailman/listinfo/dev">ovs-dev mailing
+      list</a>, <a href="https://twitter.com/tgraf__">@tgraf__</a> on Twitter,
+      or on Facebook.
+    </p>
+  </description>
+<pubDate>Sat, 21 May 2016 06:22:29 GMT
+</pubDate>
+</item>
