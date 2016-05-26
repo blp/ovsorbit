@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 5: Teemu Koponen from Styra and Yusheng Wang from VMware</title>
+  <description>
+    <p>
+      Interview with Teemu Koponen of <a href="http://www.styra.com/">Styra</a>
+      and Yusheng Wang of <a href="http://www.vmware.com/">VMware</a>, about
+      the nlog language.
+    </p>
+
+    <p>
+      nlog, in this context, is unrelated to the logging platform for .NET.  It
+      is a database language, a simplified form of <a
+      href="https://en.wikipedia.org/wiki/Datalog">Datalog</a> that lacks
+      recursion and negation.  Teemu designed this language for use in Nicira
+      NVP, the forerunner of <a
+      href="https://www.sdxcentral.com/resources/vmware/what-is-vmware-nsx/">VMware
+      NSX-MH</a>.  Yusheng is now working to implement nlog in <a
+      href="https://networkheresy.com/2015/01/13/ovn-bringing-native-virtual-networking-to-ovs/">OVN</a>.
+    </p>
+
+    <p>
+      Teemu and Yusheng begin by describing the nlog language, its name (the
+      ``N'' stands for ``Nicira.''), and its purpose and contrast it with more
+      commonly known languages such as SQL.  An nlog (or Datalog) program
+      consists of a series of queries against input table that produce new
+      tables, which can be reused in subsequent queries to eventually produce
+      output tables.
+    </p>
+
+    <p>
+      In a network virtualization system such as NVP or OVN, input tables
+      contain information on the configuration or the state of the system.  The
+      queries transform this input into flow tables to push down to switches.
+      The nlog program acts a function of the entire contents of the input
+      tables, without reference to a concept of time or order.  This simplifies
+      implementation, because it avoids ordering problems found so pervasively
+      in distributed systems.  Thus, versus hand-code state machines, nlog
+      offers better hope of correctness and easier quality assurance, since it
+      allows programmers to specify the desired results rather than all of the
+      possible state transitions that could lead there.
+    </p>
+
+    <p>
+      Topics include:
+    </p>
+
+    <ul>
+      <li>
+        Related (more complicated) work in academia.
+      </li>
+
+      <li>
+        External functions for mapping output.
+      </li>
+
+      <li>
+        Query planning in NVP and in OVN.
+      </li>
+
+      <li>
+        Sharding, threading, and performance.
+      </li>
+
+      <li>
+        Where Yusheng is planning to first propose nlog for use in OVN.
+      </li>
+      
+      <li>
+        The simple Java-based network virtualization system that Yusheng built
+        to demonstrate the idea.
+      </li>
+
+      <li>
+        The patches that we should expect to see soon from Yusheng.
+      </li>
+
+      <li>
+        Code size for nlog implementations (small!).
+      </li>
+
+      <li>
+        Strategies for testing an nlog implementation.
+      </li>
+
+      <li>
+        Data types in nlog, and risks of asynchronous interfacing
+      </li>
+
+      <li>
+        Convergence, performance, and transactions.
+      </li>
+
+      <li>
+        Lessons learned:
+
+        <ol>
+          <li>
+            Only implement a DSL if you know what you're getting in for.
+          </li>
+
+          <li>
+            nlog solved correctness issues, period (leaving developers to worry
+            about scale).
+          </li>
+        </ol>
+      </li>
+    </ul>
+
+    <p>
+      You can reach Teemu at <a
+      href="mailto:koponen@styra.com">koponen@styra.com</a> and Yusheng at <a
+      href="yshwang@vmware.com">yshwang@vmware.com</a>.
+    </p>
+  </description>
+<pubDate>Thu, 26 May 2016 01:05:53 GMT</pubDate>
+</item>
