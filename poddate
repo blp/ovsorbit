@@ -1,2 +1,2 @@
 #! /bin/sh
-LC_ALL=C date -u '+%a, %d %b %Y %H:%M:%S GMT'
+LC_ALL=C date -u '+%a, %d %b %Y %H:%M:%S GMT' | tr -d '\n'
