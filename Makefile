@@ -11,7 +11,7 @@ FILES = \
 	orbit_*.png \
 	style.css
 install: all
-	rsync $(FILES) benpfaff.org:/srv/ovsorbit.benpfaff.org
+	rsync -P $(FILES) benpfaff.org:/srv/ovsorbit.benpfaff.org
 .PHONY: install
 
 stats:
