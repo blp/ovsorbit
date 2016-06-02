@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 6: Peter Phaal from InMon</title>
+  <description>
+    <p>
+      Interview with Peter Phaal of <a href="http://www.inmon.com/">InMon</a>,
+      about <a href="http://www.sflow.org">sFlow</a> monitoring and how it is
+      used with Open vSwitch.  In summary, an sFlow agent in a switch (such as
+      Open vSwitch or a hardware switch) selects a specified statistical sample
+      of packets that pass through it, along with information on how the packet
+      was treated (e.g. a FIB entry in a conventional switch or OpenFlow
+      actions in Open vSwitch) and sends them across the network to an sFlow
+      collector.  sFlow agents also periodically gather up interface counters
+      and other statistics and send them to collectors.  Data collected from
+      one or more switches can then be analyzed to learn useful properties of
+      the network.
+    </p>
+
+    <p>
+      Peter begins with a description of the history of sFlow, including its
+      pre-history in network monitoring products that Peter was involved in at
+      HP Labs in Bristol.  At the time, network monitoring did not require a
+      special protocol such as sFlow, because networks were based on a shared
+      medium to which any station could listen.  With the advent of switched
+      networks, the crossbar inside each switch effectively became the shared
+      medium and required a protocol such as sFlow to look inside.
+    </p>
+
+    <p>
+      Peter compares the data collected by sFlow to a ``ship in a bottle,'' a
+      shrunken model of the network on which one can later explore route
+      analytics, load balancing, volumetric billing, load balancing, and more.
+      He says that SDN has empowered users of sFlow by providing a control
+      plane in which one can better act on the information obtained from
+      analytics:
+    </p>
+
+    <blockquote>
+      ``If you see a DDoS attack, you drop a filter in and it's removed from
+      the network.  If you see a large elephant flow taking a path that's
+      congested, you apply a rule to move it to an alternative path.  So it
+      really unlocks the value of the analytics, having a control plan that's
+      programmable, and so I think the analytics and control really go
+      hand-in-hand.''
+    </blockquote>
+
+    <p>
+      sFlow can be used in real time or for post-facto analysis.  The latter is
+      more common historically, but Peter thinks that the potential for
+      real-time control are exciting current developments.
+    </p>
+
+    <p>
+      In contrast to NetFlow and IPFIX, sFlow exports relatively raw data for
+      later analysis.  Data collected by sFlow can be later converted,
+      approximately, into NetFlow or IPFIX formats. 
+    </p>
+
+    <p>
+      Other topics:
+    </p>
+
+    <ul>
+      <li>
+        Use of sFlow for making <a
+        href="https://en.wikipedia.org/wiki/Elephant_flow">elephant flows</a>
+        coexist with mice, as <a
+        href="http://opennetsummit.org/archives/mar14/site/pdf/2014/sdn-idol/Brocade-SDN-Idol-Proposal.pdf">demonstrated
+        at ONS 2014</a>.
+      </li>
+
+      <li>
+        How sFlow has managed to gain such wide hardware support.  (Peter gives
+        credit to Cisco for this.)
+      </li>
+
+      <li>
+        sFlow implementation in <a href="http://www.p4.org">P4</a>.  P4 can
+        make it easier to add new statistics reporting to sFlow, such as the
+        ability to report the total latency that a packet observed in passing
+        through a switch or the queuing delay or queue depth that it
+        experienced, statistics similar to those which P4 has already been
+        applied for <a
+        href="http://p4.org/p4/inband-network-telemetry/">In-Band Network
+        Telemetry</a>.  Peter describes some of the pros and cons of in-band
+        and out-of-band monitoring.
+      </li>
+
+      <li>
+        How Open vSwitch came to InMon's attention back in 2010 and prompted
+        them to contribute an sFlow implementation.
+      </li>
+
+      <li>
+        <a href="http://mininet.org/overview/">Mininet</a> with sFlow and Open
+        vSwitch.
+      </li>
+
+      <li>
+        <a href="http://blog.sflow.com/2016/03/microservices.html">sFlow for
+        microservices</a> and <a
+        href="http://blog.sflow.com/2016/04/network-visibility-with-docker.html">Docker</a>.
+      </li>
+
+      <li>
+        <a href="http://www.sflow.net/">Host sFlow</a> for monitoring entire
+        hosts instead of just (physical or virtual) switches.
+      </li>
+
+      <li>
+        How to choose an appropriate sampling rate.
+      </li>
+
+      <li>
+        Why sampling rates based on time (e.g. sampling N packets per second)
+        instead of event-based sampling (e.g. N packets out of 1000) is
+        horribly biased.
+      </li>
+
+      <li>
+        Why sampling can be more accurate than capturing every packet, due to
+        bias on overrun.
+      </li>
+
+      <li>
+        Why loss due to use of UDP is not a problem for sFlow.
+      </li>
+
+      <li>
+        Why sFlow is more future-proof than techniques that require the switch
+        itself or the agent to more deeply analyze packets.  ``Software-Defined
+        Analytics.''
+      </li>
+
+      <li>
+        Using hardware and software implementations of sFlow together in a
+        single network.
+      </li>
+
+      <li>
+        Why sFlow is cheaper to implement in hardware (and software!) than
+        IPFIX or NetFlow.
+      </li>
+
+      <li>
+        Future directions for sFlow.
+      </li>
+
+      <li>
+        Prime pitfall for sFlow in Open vSwitch: setting a 100% sampling rate.
+      </li>
+
+      <li>
+        What should <a
+        href="https://networkheresy.com/2015/01/13/ovn-bringing-native-virtual-networking-to-ovs/">OVN</a>
+        do to support sFlow?  (Answer: nothing is needed.)  For this, see also
+        the presentation that Peter gave at the <a
+        href="http://openvswitch.org/support/ovscon2015/">Open vSwitch 2015
+        Fall Conference</a>.  <a
+        href="http://openvswitch.org/support/ovscon2015/16/1530-phaal.pdf">Slides</a>
+        and <a href="https://www.youtube.com/watch?v=bkPNnrqeGjg">video</a>
+        from the presentation are both available.  Peter also made a related <a
+        href="http://blog.sflow.com/2015/11/network-virtualization-visibility-demo.html">blog
+        post</a>.
+      </li>
+    </ul>
+
+    <p>
+      Further resources on sFlow include <a
+      href="http://www.sflow.org">sflow.org</a> for the sFlow protocol, <a
+      href="http://www.sflow.net">sflow.net</a> for the sFlow host agent, and
+      Peter's blog at <a href="http://blog.sflow.com">blog.sflow.com</a>.
+    </p>
+    
+    <p>
+      You can find Peter on Twitter as <a
+      href="https://twitter.com/sFlow">@sFlow</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro and bumper music is <a
+      href="http://dig.ccmixter.org/files/myfreemickey/48180">Electro
+      Deluxe</a>, featuring Gurdonack, copyright 2014 by My Free Mickey.  The
+      outro music is <a
+      href="http://dig.ccmixter.org/files/JeffSpeed68/44932">Girls like
+      you</a>, featuring Thespinwires, copyright 2014 by Stefan Kartenberg.
+      All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Thu, 02 Jun 2016 06:39:51 GMT</pubDate>
+</item>
