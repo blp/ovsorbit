@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 7: Kyle Mestery from IBM</title>
+  <description>
+    <p>
+      Interview with Kyle Mestery, a Distinguished Engineer at IBM who has been
+      involved with Open vSwitch since about 2012, about the Open vSwitch
+      development process.  Our conversation was based on <a
+      href="http://events.linuxfoundation.org/sites/events/files/slides/Open%20Source%20Networking_%20Good%2C%20Bad%2C%20Ugly.pdf">Upstream
+      Open Source Networking Development: The Good, The Bad, and the Ugly</a>,
+      a presentation at <a
+      href="http://events.linuxfoundation.org/events/archive/2016/open-networking-summit">ONS
+      2016</a> given by Kyle along with Justin Pettit from VMware and Russell
+      Bryant from Red Hat.  Kyle also gave a version of the talk with Armando
+      Migliaccio at <a
+      href="https://www.openstack.org/summit/austin-2016/">OpenStack
+      Austin</a>.  The latter talk was <a
+      href="https://www.openstack.org/videos/video/open-source-networking-development-the-good-the-bad-and-the-ugly">recorded
+      on video</a>.
+    </p>
+
+    <p>
+      The focus of the conversation is to present the Open vSwitch development
+      process by comparing it against the process for <a
+      href="https://wiki.openstack.org/wiki/Neutron">OpenStack Neutron</a> and
+      <a href="https://www.opendaylight.org/">OpenDaylight</a>.  All three
+      project names begin with ``Open,'' but there are significant differences
+      in how they develop code!
+    </p>
+
+    <p>
+      How do these projects communicate?  All of them have mailing lists,
+      although there are subtle differences in how they use them.  Open vSwitch
+      has two main lists, <a
+      href="http://openvswitch.org/pipermail/discuss/">ovs-discuss</a> and <a
+      href="http://openvswitch.org/pipermail/dev/">ovs-dev</a>.  OpenStack,
+      despite being a much bigger project, has only a single development
+      mailing list that it divides up using bracketed ``topic tags'' supported
+      by the <a href="https://www.gnu.org/software/mailman/">GNU Mailman</a>
+      mailing list manager.  OpenDaylight, finally, has many mailing lists per
+      subproject.  Kyle explains the advantages and disadvantages of each
+      approach.
+    </p>
+
+    <p>
+      All of these projects have IRC channels also.  Open vSwitch has a single
+      channel <code>#openvswitch</code> and the other projects have multiple,
+      subproject-specific channel
+    </p>
+
+    <p>
+      OpenDaylight stands out as the only project among the three that relies
+      heavily on conference calls.
+    </p>
+
+    <p>
+      Are the projects friendly to newcomers?  In general, Kyle thinks so.  As
+      with any project, regardless of open or closed source, there will be some
+      existing developers who are super-helpful and others who are overworked
+      or overstressed and less helpful initially.  In the end, how you cycle
+      through leader and contributors in a project is how the project grows.
+    </p>
+
+    <p>
+      The projects handle bugs differently as well.  Open vSwitch primarily
+      handles bugs on the mailing list.  OpenStack files bugs in <a
+      href="http://launchpad.net">Launchpad</a> using a carefully designed
+      template.  OpenDaylight has a <a
+      href="https://bugs.opendaylight.org/">Bugzilla</a> instance and a <a
+      href="https://wiki.opendaylight.org/view/OpenDaylight_Bugs">wiki</a> with
+      instructions and advice.  Kyle thinks that Open vSwitch may need to make
+      heavier use of a bug tracker sometime in the future.
+    </p>
+
+    <p>
+      The projects have different approaches to code review.  OpenDaylight and
+      OpenStack use <a href="https://www.gerritcodereview.com/">Gerrit</a>, a
+      web-based code review system, although many developers do not like and
+      avoid the Gerrit web interface, instead using a command-line tool called
+      <a href="https://github.com/openstack/gertty">Gertty</a>.  Open vSwitch
+      primarily uses patches emailed to the ovs-dev mailing list, similar to
+      the Linux kernel patch workflow.  In-flight patches can be monitored via
+      <a
+      href="https://patchwork.ozlabs.org/project/openvswitch/list/">Patchwork</a>,
+      although this is only a tracking system and has no direct control over
+      the Open vSwitch repository.  Open vSwitch also accepts <a
+      href="https://github.com/openvswitch/ovs/pulls">pull requests</a> via
+      Github.
+    </p>
+
+    <p>
+      Kyle mentions some ways that the Open vSwitch development process might
+      benefit from approaches used in other projects, such as by assigning
+      areas to particular reviewers and dividing the project into multiple,
+      finer-grained repositories.  OVN, for example, might be appropriate as a
+      separate project in the future.
+    </p>
+
+    <p>
+      Kyle's advice: plan ahead, research the projects, give your developers
+      time to become comfortable with the projects, treat everyone with
+      respect, treat everyone equally, and give back to the core of the
+      project.  Keep in mind that little maintenance patch are as important as
+      huge new features.  Finally, trust your developers: you hired good
+      people, so trust their ability to work upstream.
+    </p>
+
+    <p>
+      The interview also touches on:
+    </p>
+
+    <ul>
+      <li>
+        How Kyle became involved with Open vSwitch when he was a software
+        engineer at Cisco and how his role at IBM has shifted a little more
+        toward management.
+      </li>
+
+      <li>
+        The ``Wild West'' explosion of open source software in networking in
+        the last few years.
+      </li>
+
+      <li>
+        The four stages of how companies get involved in open source networking
+        projects: excitement, panic, enlightenment, success.  The key to
+        enlightenment, Kyle says, is that you get out what you put in, which
+        includes a ``karma cycle'' of helping to get other developer's code in,
+        e.g. through code review.
+      </li>
+
+      <li>
+        The importance of giving developers credit for putting time into
+        reviewing and testing code, and how different projects do it, plus the
+        pitfalls in using karma-like systems that can be gamed to the point of
+        becoming ``poisonous.''
+      </li>
+
+      <li>
+        ``Onboarding'' in projects and how a developer becomes a ``core team''
+        member or ``committer.''
+      </li>
+    </ul>
+
+    <p>
+      You can reach Kyle as @<a href="https://twitter.com/mestery">mestery</a>
+      on Twitter and follow his blog at <a
+      href="http://siliconloons.com/">siliconloons.com</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Sat, 11 Jun 2016 19:59:35 GMT</pubDate>
+</item>
