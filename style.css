@@ -1,9 +1,12 @@
-div {
-    vertical-align:top;
+body {
+    color: #000;
+    background-color:#ffffff;
 }
-p {
-    vertical-align:baseline;
+
+.attribution {
+    font-size: 80%;
 }
+
 a {
     text-decoration: none;
     font-weight: 700;
@@ -18,15 +21,13 @@ a:link {
     color:#447099;
 }
 
-
-body {
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 14px;
-    line-height: 1.5em;
-    color: #000;
-    background-color:#ffffff;
+@media only screen
+and (min-width : 300px)
+and (max-width : 750px) {
+    .datecell { display: none }
+    .sizecell { display: none }
+    .logo { text-align: center }
+    h1, h2 { text-align: center }
 }
 
-.attribution {
-    font-size: 80%;
-}
+td { border-style: single }

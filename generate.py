@@ -109,15 +109,20 @@ for d in reversed(episodes):
     for elem in get_elem(e.documentElement, 'title').childNodes:
         title += elem.toxml()
 
-    mp3 = '<a href="episode-%d.mp3">MP3</a> (%d MB, %d min)' % (
-        i, (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
+    link = '<a href="episode-%d.mp3">MP3</a>' % i
+    mp3info = '(%d MB, %d min)' % (
+        (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
-    summary += '<tr><td>%s</td><td><a href="#e%d">%s</a></td><td>%s</td></tr>\n' % (date, i, title, mp3)
+    summary += '''<tr>
+  <td class="datecell">%s</td><td><a href="#e%d">%s</a></td>
+  <td>%s <span class="sizecell">%s</span></td>
+</tr>
+''' % (date, i, title, link, mp3info)
 
-    s = '<h2><a name="e%d">%s (%s)</a></h2>\n' % (i, title, date)
+    s = '<h3><a name="e%d">%s (%s)</a></h3>\n' % (i, title, date)
     for elem in get_elem(e.documentElement, 'description').childNodes:
         s += elem.toxml()
-    s += '<p>Listen: %s.</p>' % mp3
+    s += '<p>Listen: %s %s.</p>' % (link, mp3info)
     details += s
 
 file = open('index-skel.html')
