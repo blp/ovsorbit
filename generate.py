@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 
 import xml.dom.minidom
 import os
@@ -8,7 +8,7 @@ import re
 base_url = 'http://ovsorbit.benpfaff.org'
 def parse_file(name):
     file = open(name)
-    s = file.read().replace('${baseurl}', base_url)
+    s = file.read().replace('${baseurl}', base_url).replace("``", "&#x201c;").replace("''", "&#x201d;")
     return xml.dom.minidom.parseString(s)
 
 def get_elem(parent, name):
@@ -93,7 +93,7 @@ for d in episodes:
     channel_node.appendChild(e.documentElement)
 
 rss_xml = open('rss.xml', 'w')
-print >>rss_xml, rss.toxml()
+rss_xml.write(rss.toxml())
 rss_xml.close()
 
 summary = ''
@@ -123,5 +123,5 @@ for d in reversed(episodes):
 file = open('index-skel.html')
 s = file.read().replace('${summary}', summary).replace('${details}', details)
 index_html = open('index.html', 'w')
-print >>index_html, s
+index_html.write(s)
 index_html.close()
