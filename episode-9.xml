@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 9: Muhammad Shahbaz from Princeton</title>
+  <description>
+    <p>
+      Interview with <a href="http://www.cs.princeton.edu/~mshahbaz/">Muhammad
+      Shahbaz</a>, a third-year grad student at Princeton advised by Jennifer
+      Rexford and Nick Feamster.  Shahbaz talks about his work on <a
+      href="http://pisces.cs.princeton.edu/">PISCES</a>, a version of Open
+      vSwitch modified to add support for <a href="http://www.p4.org">P4</a>, a
+      language for programming flexible hardware switches, which will be
+      presented at <a
+      href="http://conferences.sigcomm.org/sigcomm/2016/index.php">SIGCOMM</a>
+      in August 2016.  Shahbaz is spending this summer as an intern at VMware,
+      where he is working to bring PISCE's features into a form where they can
+      be integrated into an upstream Open vSwitch release.
+    </p>
+
+    <p>
+      A P4 program specifies a number of different aspects of a switch: how
+      packets are parsed, their processing as they pass through a series of
+      table, and how the packets are reassembled (``deparsed'') when they
+      egress the switch.
+    </p>
+
+    <p>
+      From an Open vSwitch person, the main way that P4 differs from OpenFlow
+      in that it allows the user to specify the protocols to be used.  Any
+      given version of Open vSwitch, when controlled over OpenFlow, is
+      essentially a fixed-function switch, in the sense that it supports a
+      specific set of fixed protocols and fields, but when P4 is integrated
+      into Open vSwitch a network developer can easily add and remove and
+      customize the protocols that it supports.
+    </p>
+
+    <p>
+      Modifying C source code and modifying P4 source code are both forms of
+      programming, but P4 source code is much smaller and much more in the
+      ``problem domain'' for network programming, and thus more
+      programmer-efficient.  Because P4 programs tend to be simple and problem
+      domain specific, this also allows end users who want special features but
+      don't have strong C programming skills to add features.  Shahbaz quotes
+      some measurements on difference in code size: 20x to 40x reduction in
+      code size when a pipeline is implemented in P4 rather than C.
+    </p>
+
+    <p>
+      One must trade some costs for these improvements.  In particular, it is a
+      challenge to make P4 perform well in Open vSwitch because the P4 abstract
+      forwarding model is not an exact match for the Open vSwitch or OpenFlow
+      abstract forwarding model.  For this reason, the initial PISCES prototype
+      had a 40% performance overhead over regular Open vSwitch for a simple
+      L2/L3 routing application.  With a number of optimizations, including
+      those around field updates and checksum verification and update, the
+      penalty was reduced to about 3%, and Shahbaz is optimistic that it can be
+      made faster still, perhaps faster than the current OVS code.  The
+      optimizations both reduced the cost in the Open vSwitch ``fast path''
+      cache and increased the hit rate for the cache.
+    </p>
+
+    <p>
+      The quoted 40% and 3% performance hits for PISCES are actually
+      comparisons against Open vSwitch with its microflow cache disabled, which
+      is not a normal way to run Open vSwitch.  This is because PISCES does not
+      yet have a way to specify how to compute the hash used for indexing the
+      microflow cache; in plain Open vSwitch, this hash is computed in
+      (protocol-dependent) NIC hardware, whereas in PISCES it would need to be
+      computed in software.
+    </p>
+
+    <p>
+      Shahbaz mentioned that PISCES may be used in the next iteration of <a
+      href="https://www.coursera.org/course/sdn1">Nick Feamster's Coursera
+      course on Software-Defined Networking</a> and talks about the target
+      audience for the course.
+    </p>
+
+    <p>
+      Work for the summer, besides getting some of this work into OVS, includes
+      looking into some more advanced features like P4 stateful processing
+      features such as counters, meters, and registers.  Ethan Jackson's <a
+      href="https://www.usenix.org/conference/atc16/technical-sessions/presentation/jackson">SoftFlow</a>
+      paper recently presented at USENIX ATC is also relevant to stateful
+      processing in OVS.
+    </p>
+
+    <p>
+      To find out more about PISCES or to contact Shahbaz, visit <a
+      href="http://pisces.cs.princeton.edu/">its website at Princeton</a>,
+      which includes a preprint of the paper and links to the Git repository
+      with source code.  You can also view <a
+      href="http://openvswitch.org/support/ovscon2015/17/1620-shahbaz.pptx">slides</a>
+      and <a href="https://www.youtube.com/watch?v=mqHuK1x14As">video</a> that
+      Shahbaz presented about an early version of PISCES at <a
+      href="https://www.youtube.com/watch?v=mqHuK1x14As">Open vSwitch 2015 Fall
+      Conference</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Sat, 25 Jun 2016 22:41:42 GMT</pubDate>
+</item>

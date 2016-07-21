@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 10: Ethan Jackson from Berkeley</title>
+  <description>
+    <p>
+      Interview with <a href="http://ej2.org">Ethan Jackson</a>, a PhD student
+      at Berkeley advised by Scott Shenker.  Before Berkeley, Ethan worked on
+      Open vSwitch as an employee at Nicira Networks and then at VMware.  His
+      contributions to Open vSwitch have greatly slowed since he moved on to
+      Berkeley, but as of this writing Ethan is still the second most prolific
+      all-time contributor to Open vSwitch measured in terms of commits, with
+      over 800.
+    </p>
+
+    <p>
+      Ethan talks about his experience implementing <a
+      href="https://en.wikipedia.org/wiki/IEEE_802.1ag">CFM</a> and <a
+      href="https://en.wikipedia.org/wiki/Bidirectional_Forwarding_Detection">BFD</a>
+      protocols in Open vSwitch.  He found out that, whenever anything went
+      wrong in a network, the first thing that found the problem was CFM (or
+      BFD), and so that was always reported as the root of the problem:
+    </p>
+
+    <blockquote>
+      ``Every bug in the company came directly to me, and I got very good at
+      debugging and pointing out that other people's code was broken...  That's
+      really how I progressed as an engineer.  Being forced to debug things
+      makes you a better systems person.''
+    </blockquote>
+
+    <p>
+      The body of the interview is about <a
+      href="http://people.eecs.berkeley.edu/~ejj/publications/softflow.pdf">SoftFlow</a>,
+      a paper published at USENIX ATC about integrating middleboxes into Open
+      vSwitch.  The paper looks at the spectrum of ways to implement a software
+      switch, which currently has two main points.  At one end of the spectrum
+      is the code-driven <a
+      href="http://read.cs.ucla.edu/click/click">Click</a>-like model where
+      each packet passes through a series of black box-like stages.  At the
+      other end is the data-driven Open vSwitch model, in which a single code
+      engine applies a series of packet classifier based stages to a packet.
+    </p>
+
+    <p>
+      The data-driven model has some important advantages, especially regarding
+      performance, but it's really bad at expressing middleboxes, particularly
+      when state must be maintained between packets.  SoftFlow is an attempt to
+      bring Click-like functionality into an Open vSwitch world, where
+      firewalls and NATs can be expressed and OpenFlow functionality can be
+      incorporated where it is appropriate as well.
+    </p>
+
+    <p>
+      Part of the problem comes down to safety.  It's not reasonable to trust
+      all vendors to put code directly into the Open vSwitch address space,
+      because of code quality and trust issues.  The common solution, in an NFV
+      environment, is to put each virtual network function into its own
+      isolated virtual machine, but this has a high cost in performance and
+      other resources.
+    </p>
+
+    <p>
+      SoftFlow is an extension to OpenFlow actions.  Traditionally, actions are
+      baked into the switch.  SoftFlow allows a third party to augment actions
+      in the switch via a well-defined interface.  Actions are arbitrary code
+      that can perform pretty much anything, but the intention is that they
+      should integrate in well-defined ways with OpenFlow.  For example, a
+      firewall has a need for packet classification, which is easily and
+      naturally implemented in OpenFlow, but a connection tracker, that cannot
+      be expressed in OpenFlow, might be expressed in SoftFlow and then
+      integrated with OpenFlow classifiers.  The paper talks about a number of
+      these SoftFlow features.
+    </p>
+
+    <p>
+      Ethan contrasts connection tracking via SoftFlow against the Linux kernel
+      based connection tracking that has been recently integrated into Open
+      vSwitch.  According to Ethan, the value of SoftFlow for such an action is
+      the infrastructure.  Kernel-based connection tracking required a great
+      deal of infrastructure to be built up, and that infrastructure can't
+      necessarily be reused for another stateful action.  However, SoftFlow
+      itself provides a reusable framework, simplifying development for each
+      new action built with it.
+    </p>
+
+    <p>
+      Ethan explains a firewall example in some detail.
+    </p>
+
+    <p>
+      The paper compares the performance of SoftFlow to various alternate
+      implementation, with a focus on Open vSwitch.  They measured several
+      pipelines with various traffic patterns and compared a SoftFlow
+      implementation to a more standard NFV implementation with Open vSwitch as
+      a software switch and the virtual functions implemented as virtual
+      machines.  SoftFlow provided a significant performance gain in this
+      comparison.
+    </p>
+
+    <p>
+      Ethan describes why he is skeptical of performance measurements of NFV
+      systems in general: first, because they generally measure trivial
+      middleboxes, where the overhead of the actual middlebox processing is
+      negligible, and second, because they focus on minimum-length packets,
+      which may not be realistic in the real world.
+    </p>
+
+    <p>
+      Ethan talks about hardware classification offload.  This is a general
+      Open vSwitch feature, not actually specific to SoftFlow.  Open vSwitch
+      does a packet classification for every packet in the datapath, which is
+      expensive and the bulk of the cost of Open vSwitch packet forwarding.
+      NICs from Intel and Broadcom and others have TCAMs that can perform
+      packet classification in hardware much more quickly than software.  These
+      TCAMs have significant limitations but the paper describes how these can
+      be overcome to obtain major speedups for software switching.  (This is an
+      area where Open vSwitch's architecture gives it a major advantage over
+      one with an architecture like Click.)
+    </p>
+
+    <p>
+      Ethan's current project is <a href="http://quilt.io/">Quilt</a>, a
+      container orchestration system whose goal is to find the right model for
+      expressing distributed systems.  Quilt assumes the flexibility provided
+      by network virtualization systems and explores how a system built on this
+      flexibility should be architected.  It uses a declarative programming
+      language to describe a distributed system and includes software to
+      implement and maintain a system described using the language.  The system
+      is designed to be easy to deploy and use with popular distributed systems
+      such as <a href="https://en.wikipedia.org/wiki/Apache_Spark">Apache
+      Spark</a>.
+    </p>
+
+    <p>
+      You can reach Ethan via email at his website, <a
+      href="http://ej2.org/">ej2.org</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Wed, 20 Jul 2016 03:39:06 GMT</pubDate>
+</item>
