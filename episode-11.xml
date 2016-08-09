@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 11: John Fastabend from Intel</title>
+  <description>
+    <p>
+      Interview with John Fastabend, an engineer at Intel whose work in the
+      Linux kernel has focused on the scheduling core of the networking stack
+      and Intel NIC drivers.  John has also been involved in IEEE
+      standardization of 802.1Q and Data Center Bridging (DCB).
+    </p>
+
+    <p>
+      The interview focuses on John's recent work on P4 for edge devices, which
+      he presented at the <a href="http://p4.org/p4-workshop-2016/">P4
+      Workshop</a> held at Stanford in May.  The <a
+      href="http://schd.ws/hosted_files/2016p4workshop/1d/Intel%20Fastabend-P4%20on%20the%20Edge.pdf">slides</a>
+      for his talk are available.
+    </p>
+
+    <p>
+      John's work originated in the use of P4 as a language for describing the
+      capabilities of Intel NICs, as an alternative to thousand-page manuals
+      written in English.  He moved on to explore ways that software can be
+      offloaded into hardware, to improve performance and of course to make
+      Intel's hardware more valuable.  That led to the use of P4 to describe
+      software as well, and eventually to the question that kicked off his
+      talk, ``Is P4 a useful abstraction for an edge node?'' where an edge node
+      in this case refers to a server running VMs or containers.
+    </p>
+
+    <p>
+      The work presented at the P4 conference includes a P4 compiler that
+      generates IR code (that is, portable bytecode) for LLVM, a portable
+      compiler that can generate code for many architectures and that is
+      designed to be easily amenable to extensions.  John then used an existing
+      backend to LLVM to generate <a
+      href="https://lwn.net/Articles/603983/">eBPF</a> code that runs inside
+      the Linux kernel on any architecture through an in-kernel <a
+      href="https://en.wikipedia.org/wiki/Just-in-time_compilation">just-in-time
+      (JIT) compiler</a>.
+    </p>
+
+    <p>
+      John used this infrastructure to answer a few different questions.  Is P4
+      expressive enough to build a virtual switch?  Does eBPF have enough
+      infrastructure to implement a virtual switch?  The answer in each case
+      appears to be ``yes.''
+    </p>
+
+    <p>
+      The runtime interface to the eBPF P4 programs works through <a
+      href="http://www.brendangregg.com/blog/2015-05-15/ebpf-one-small-step.html">eBPF
+      maps</a>.  John's work include tools for populating maps, including
+      command-line and <a
+      href="https://en.wikipedia.org/wiki/NETCONF">NETCONF</a> interfaces.
+    </p>
+
+    <p>
+      John is exploring the idea of using <a
+      href="https://en.wikipedia.org/wiki/Advanced_Vector_Extensions">Intel
+      AVX</a> instructions to accelerate packet processing.  He also points out
+      that the JIT can actually be an asset for performance, rather than a
+      liability, if it can specialize the code to better run on particular
+      hardware.  The well-established JITs for Java and Lua might point in the
+      right direction.
+    </p>
+
+    <p>
+      John describes the performance advantages of <a
+      href="https://lwn.net/Articles/682290/">XDP</a> (Express Data Path) for
+      processing packets that do not need to go to the operating system without
+      constructing a full Linux <code>sk_buff</code> data structure.
+    </p>
+
+    <p>
+      The main application of this work, so far, has been to experiment with
+      software implementations of hardware.  John is also experimenting with a
+      load balancer and a connection tracker.
+    </p>
+
+    <p>
+      John's work is all in the context of the Linux kernel.  He speculates on
+      how it could be applied to a switch running on DPDK in userspace.  In
+      such an environment, it might make sense to have LLVM compile directly to
+      native code instead of via eBPF.
+    </p>
+
+    <p>
+      John talks about P4-specific optimizations to improve P4 programs that
+      are written in a way that is difficult to implement efficiently in eBPF.
+    </p>
+
+    <p>
+      John and Ben discuss some of the differences between software and
+      hardware implementations of P4.
+    </p>
+
+    <p>
+      John describes two models for network processing in software.  In the
+      ``run-to-completion'' model, a packet is processed from ingress to egress
+      on a single core.  In the ``pipeline'' model, the packet passes from one
+      core to another at multiple stages in its processing.  DPDK supports both
+      models.  John and Ben both have the intuition that the run-to-completion
+      model is likely to be faster because it avoids the overhead of passing
+      packets between cores, and they discuss why there might be exceptions.
+    </p>
+
+    <p>
+      The next step is performance testing and optimization, gathering users,
+      and moving to P4 2016.
+    </p>
+
+    <p>
+      John and Ben discuss related work in P4 and eBPF.  Thomas Graf's
+      eBPF-based work on Cilium, discussed in <a
+      href="https://ovsorbit.benpfaff.org/#e4">Episode 4</a>, leans more toward
+      orchestration and scale over a large system than as a general-purpose
+      switch.  Ethan Jackson's work on SoftFlow, discussed in <a
+      href="https://ovsorbit.benpfaff.org/#e10">Episode 10</a>, is more about
+      how to integrate state with Open vSwitch.  Muhammad Shahbaz's work on
+      integrating P4 into Open vSwitch, discussed in <a
+      href="https://ovsorbit.benpfaff.org/#e9">Episode 9</a>, can benefit from
+      John's experience using LLVM.
+    </p>
+
+    <p>
+      If you're interested in experimenting with the prototype that John has
+      developed, or if you have other questions for him, the best way to
+      contact him is via email.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Tue, 09 Aug 2016 01:40:05 GMT</pubDate>
+</item>
