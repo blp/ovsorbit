@@ -155,9 +155,9 @@
     </ul>
 
     <p>
-      <a
-      href="https://docs.google.com/presentation/d/16s41VrUuHbaHUwWCkeSBa7DvY2O0PwVcOe-sO8TQ3o0/edit">More
-      information about Cilium.</a>
+      More information about Cilium: <a
+      href="https://docs.google.com/presentation/d/16s41VrUuHbaHUwWCkeSBa7DvY2O0PwVcOe-sO8TQ3o0/edit">slides</a>
+      and the <a href="https://github.com/cilium/cilium">code repository</a>.
     </p>
 
     <p>
