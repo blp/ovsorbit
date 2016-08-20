@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Episode 13: Jia Rao and Kun Suo from University of Texas at Arlington</title>
+  <description>
+    <p>
+      On Aug. 4 and 5, I attended <a
+      href="http://www.cs.hku.hk/apsys2016/program.html">APSys 2016</a>, the
+      Asia-Pacific Workshop on Systems.  I was impressed with how many of the
+      papers presented there were relevant to Open vSwitch and virtualization
+      in general.  This episode is an interview with Jia Rao and Kun (Tony) Suo
+      of the University of Texas at Arlington, to talk about their APSys paper,
+      <a href="http://i.cs.hku.hk/~fcmlau/papers/capsule.pdf">Time Capsule:
+      Tracing Packet Latency across Different Layers in Virtualized
+      Systems</a>, which received the conference's Best Paper award.
+    </p>
+
+    <p>
+      The paper's abstract is:
+    </p>
+
+    <blockquote>
+      Latency monitoring is important for improving user experience and
+      guaranteeing quality-of-service (QoS).  Virtualized systems, which have
+      complex I/O stacks spanning multiple layers and often with unpredictable
+      performance, present more challenges in monitoring packet latency and
+      diagnosing performance abnormalities compared to traditional systems.
+      Existing tools either trace network latency at a coarse granularity, or
+      incur considerable overhead, or lack the ability to trace across
+      different boundaries in virtualized environments.  To address this issue,
+      we propose Time Capsule (TC), an in-band profiler to trace packet level
+      latency in virtualized systems with acceptable overhead.  TC timestamps
+      packets at predefined tracepoints and embeds the timing information into
+      packet payloads.  TC decomposes and attributes network latency to various
+      layers in the virtualized network stack, which can help monitor network
+      latency, identify bottlenecks, and locate performance problems.
+    </blockquote>
+
+    <p>
+      The interview covers the basic idea behind Time Capsule, the mechanism
+      that it uses, techniques for comparing clocks of different machines
+      across a network, and how it helps users and administrators track down
+      latency issues in a virtual network, with reference to a specific example
+      in the paper that shows the advantage of the fine-grained latency
+      monitoring available in Time Capsule.  ``You can find some interesting
+      results that are totally different from the results you get from
+      coarse-grained monitoring.''
+    </p>
+
+    <p>
+      Other topics include comparison against whole-system profilers such as <a
+      href="https://en.wikipedia.org/wiki/Perf_%28Linux%29">Perf</a> or <a
+      href="http://xenoprof.sourceforge.net/">Xenoprof</a>, the overhead of
+      using Time Capsule, how many tracepoints are usually needed, how to
+      decide where to put them, and how to insert a tracepoint.
+    </p>
+
+    <p>
+      There is a brief discussion of the relationship between Time Capsule and
+      <a href="http://p4.org/p4/inband-network-telemetry/">In-Band Network
+      Telemetry</a> (INT).  Time Capsule focuses on virtualization, timing, and
+      network processing within computer systems, whereas INT tends to focus
+      more on switching and properties of the network such as queue lengths.
+    </p>
+
+    <p>
+      Time Capsule has not yet been released but it will be made available in
+      the future.  For now, the best way to learn more is to read <a
+      href="http://i.cs.hku.hk/~fcmlau/papers/capsule.pdf">the paper</a>.
+      Readers who want to know more can contact the authors at the email
+      addresses listed in the paper.
+    </p>
+
+    <p>
+      The authors are using Time Capsule as the basis for continuing research
+      into the performance of virtualized systems.
+    </p>
+
+    <p>
+      Time Capsule has some limitations.  For example, it is limited to
+      measurements of latency, and it cannot record packet drops.  It also,
+      currently, requires tracepoints to be inserted manually, although <a
+      href="http://www.brendangregg.com/blog/2015-05-15/ebpf-one-small-step.html">eBPF</a>
+      might be usable in the future.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Sat, 20 Aug 2016 03:05:27 GMT</pubDate>
+</item>
