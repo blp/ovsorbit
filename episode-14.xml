@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Converging Approaches to Software Switches</title>
+  <description>
+    <p>
+      On Aug. 4 and 5, I attended <a
+      href="http://www.cs.hku.hk/apsys2016/program.html">APSys 2016</a>, the
+      Asia-Pacific Workshop on Systems.  This episode is my own ``industry
+      talk'' from APSys, titled ``Converging Approaches in Software Switches:
+      Combining code- and data-driven approaches to achieve a better result.''
+      <a
+      href="http://www.cs.hku.hk/apsys2016/assets/converging-approaches-apsys.pdf">Slides</a>
+      from the talk are available and may provide a little extra insight, but
+      it is not necessary to view them to follow along with with the talk.
+    </p>
+
+    <p>
+      This talk introduces the idea that software switches can be broadly
+      divided in terms of their architecture into two categories:
+      ``code-driven'' switches that call a series of arbitrary functions on
+      each packet, and ``data-driven'' switches that use a single engine to
+      apply actions selected from a series of tables.  This talk explains the
+      two models and the usefulness of the categorization, and explain how
+      hybrids of the two models can build on the strengths of both.
+    </p>
+
+    <p>
+      In the past, people have asked me to compare Open vSwitch to other
+      software switches, both architecture- and performance-wise.  This talk is
+      the closest that I plan to come to a direct comparison.  In it, I cover a
+      key architectural difference between Open vSwitch and most other software
+      switches, and I explain why that architectural difference makes a
+      difference for benchmarks that authors of many software switches like to
+      tout.
+    </p>
+
+    <p>
+      This talk includes a very kind introduction from <a
+      href="http://www.cse.iitd.ernet.in/~sbansal/">Sorav Bansal</a>, assistant
+      professor at IIT-Delhi, as well as several questions and answers
+      interleaved, including some from Sorav and some from others' whose names
+      I did not catch.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Sun, 28 Aug 2016 20:32:40 GMT</pubDate>
+</item>

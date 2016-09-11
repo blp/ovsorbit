@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Lagopus, with Yoshihiro Nakajima from NTT</title>
+  <description>
+    <p>
+      <a href="http://www.lagopus.org/">Lagopus</a> is a high-performance, open
+      source software switch, primarily for DPDK on Linux, developed at NTT in
+      its Network Innovation Laboratories research group.  Lagopus features
+      OpenFlow 1.3 conformance, plus extensions to better support NTT's use
+      cases.  This episode is a discussion with Yoshihiro Nakajima, one of the
+      switch's developers, about Lagopus, its history, goals, and future.
+    </p>
+
+    <p>
+      Lagopus supports protocols that are particularly important to carriers,
+      such as <a
+      href="https://en.wikipedia.org/wiki/Provider_Backbone_Bridge_Traffic_Engineering">PBB</a>
+      and <a
+      href="https://en.wikipedia.org/wiki/Multiprotocol_Label_Switching">MPLS</a>,
+      and includes OpenFlow extensions for general-purpose tunnel support with
+      VXLAN, GRE, and other encapsulations.  Yoshihiro talks about how, with
+      DPDK, Lagopus implements some protocols, such as ARP and ICMP, by
+      delegating them to the Linux kernel through <a
+      href="https://en.wikipedia.org/wiki/TUN/TAP">TAP devices</a>.
+    </p>
+
+    <p>
+      Yoshihiro describes the architecture of Lagopus and how it achieves high
+      performance.  It has optimizations specific to the flows that each table
+      is expected to contain; for example, a different lookup implementation
+      for L2 and L3 tables.  We talk about how the number of tables in a given
+      application affects performance.
+    </p>
+
+    <p>
+      Lagopus targets two main application domains: high-performance switching
+      or routing on bare-metal servers, or high-performance virtual switching
+      for NFV.  Some of the latter applications are in a testing phase, aiming
+      for ultimate production deployment.
+    </p>
+
+    <p>
+      We discuss some philosophy of SDN (some audio was lost at the beginning
+      of this discussion).  The important part of SDN, to Yoshihiro, is to
+      avoid the need to use CLIs to configure switches, instead moving to a
+      ``service-defined'' model.
+    </p>
+
+    <p>
+      We discussed How to fit stateful services into the stateless OpenFlow
+      match and action pipeline model, particularly how to handle the need for
+      sequence numbers in some tunneling protocols such as GRE and GTP.
+    </p>
+
+    <p>
+    </p>
+
+    <p>
+      We talk about the difficulties in forming an open source community around
+      a software switch and attracting contributions from a group outside the
+      immediate organization writing the software.  Yoshihiro reports receiving
+      reports from several users, including suggestions for improvement.
+    </p>
+
+    <p>
+      Lagopus has a growing worldwide community but some of the outreach from
+      the team has focused on Asia in general and Japan in particular because
+      of lower geographical and communication barriers.
+    </p>
+
+    <p>
+      The Lagopus team is currently working on a switch and routing control API
+      that works at a higher level than OpenFlow, based on <a
+      href="https://en.wikipedia.org/wiki/YANG">YANG</a> models.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Sat, 10 Sep 2016 17:23:32 GMT</pubDate>
+</item>
