@@ -114,7 +114,7 @@ for d in reversed(episodes):
         (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
     summary += '''<tr>
-  <td class="datecell">%s</td><td>%d. <a href="#e%d">%s</a></td>
+  <td class="datecell">%s</td><td align="right">%d.</td><td><a href="#e%d">%s</a></td>
   <td>%s <span class="sizecell">%s</span></td>
 </tr>
 ''' % (date, i, i, title, link, mp3info)
