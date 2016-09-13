@@ -1,5 +1,6 @@
 #! /usr/bin/python3
 
+import datetime
 import xml.dom.minidom
 import os
 import subprocess
@@ -29,13 +30,21 @@ for i in range(1, 16):
     m = re.match('(Sun|Mon|Tue|Wed|Thu|Fri|Sat), ([0-3][0-9]) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (201[6-9]) ([0-9][0-9]:[0-9][0-9]:[0-9][0-9]) GMT$', pubdate)
     if not m:
         assert False
-    date = '%s %s, %s' % (m.group(3), m.group(2).lstrip('0'), m.group(4))
+
+    fulldate = '%s %s, %s' % (m.group(3), m.group(2).lstrip('0'), m.group(4))
+
+    y = int(m.group(4))
+    if y == datetime.date.today().year:
+        shortdate = '%s %s' % (m.group(3), m.group(2).lstrip('0'))
+    else:
+        shortdate = '%s %s' % (m.group(3), m.group(2).lstrip('0'), m.group(4))
 
     episodes.append({'index': i,
                      'xml': e,
                      'size': size,
                      'runtime': runtime,
-                     'date': date})
+                     'fulldate': fulldate,
+                     'shortdate': shortdate})
 
 rss = rss_skel.cloneNode(deep=True)
 channel_node = get_elem(rss.documentElement, 'channel')
@@ -103,26 +112,27 @@ for d in reversed(episodes):
     e = d['xml']
     size = d['size']
     runtime = d['runtime']
-    date = d['date']
+    shortdate = d['shortdate']
+    full = d['fulldate']
 
     title = ''
     for elem in get_elem(e.documentElement, 'title').childNodes:
         title += elem.toxml()
 
     link = '<a href="episode-%d.mp3">MP3</a>' % i
-    mp3info = '(%d MB, %d min)' % (
+    mp3info = '%d MB, %d min' % (
         (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
     summary += '''<tr>
-  <td class="datecell">%s</td><td align="right">%d.</td><td><a href="#e%d">%s</a></td>
-  <td>%s <span class="sizecell">%s</span></td>
+  <td align="right">%d.</td><td><a href="#e%d">%s</a><span class="date"> (%s)</span></td>
+  <td><span title="%s">%s</span></td>
 </tr>
-''' % (date, i, i, title, link, mp3info)
+''' % (i, i, title, shortdate, mp3info, link)
 
-    s = '<h3>Episode %d: <a name="e%d">%s (%s)</a></h3>\n' % (i, i, title, date)
+    s = '<h3>Episode %d: <a name="e%d">%s (%s)</a></h3>\n' % (i, i, title, fulldate)
     for elem in get_elem(e.documentElement, 'description').childNodes:
         s += elem.toxml()
-    s += '<p>Listen: %s %s.</p>' % (link, mp3info)
+    s += '<p>Listen: %s (%s).</p>' % (link, mp3info)
     details += s
 
 file = open('index-skel.html')

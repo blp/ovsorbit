@@ -28,8 +28,7 @@ td {
 @media only screen
 and (min-width : 300px)
 and (max-width : 750px) {
-    .datecell { display: none }
-    .sizecell { display: none }
+    .date { display: none }
     .logo { text-align: center }
     h1, h2 { text-align: center }
 }
