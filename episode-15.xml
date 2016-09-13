@@ -47,7 +47,7 @@
     </p>
 
     <p>
-      We discussed How to fit stateful services into the stateless OpenFlow
+      We discussed how to fit stateful services into the stateless OpenFlow
       match and action pipeline model, particularly how to handle the need for
       sequence numbers in some tunneling protocols such as GRE and GTP.
     </p>
