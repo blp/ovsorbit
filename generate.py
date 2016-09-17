@@ -113,7 +113,7 @@ for d in reversed(episodes):
     size = d['size']
     runtime = d['runtime']
     shortdate = d['shortdate']
-    full = d['fulldate']
+    fulldate = d['fulldate']
 
     title = ''
     for elem in get_elem(e.documentElement, 'title').childNodes:
