@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Tunneling and Encapsulation, with Jesse Gross from VMware</title>
+  <description>
+    <p>
+      Tunneling and encapsulation, with protocols from GRE to Geneve, have been
+      a key part of Open vSwitch since the early days.  Jesse Gross, an early
+      employee at Nicira and major contributor to Open vSwitch, and perhaps
+      most importantly the maintainer of the Open vSwitch kernel module, joins
+      this episode of the podcast to talk about this aspect of OVS.
+    </p>
+
+    <p>
+      The conversation begins with a discussion of the reasons for L2-in-L3
+      tunnels.  Jesse's reasons for such tunnels include adding a layer of
+      indirection between physical and virtual networks.  VLANs can provide a
+      solution for partitioning networks, but they don't provide the same layer
+      of indirection.
+    </p>
+
+    <p>
+      Jesse describes the motivation for designing and implementing STT
+      encapsulation in Open vSwitch.  The biggest reason was performance,
+      primarily the cost of losing the network card hardware support for
+      various kinds of offloads, such as checksum and TCP segmentation offload
+      support.  Most network cards can only implement these for specific
+      protocols, so that using an encapsulation not specifically supported by
+      the card caused performance degradation.  STT worked around this by using
+      (abusing?) TCP as an encapsulation.  Since most network cards can offload
+      TCP processing, this allowed STT encapsulation to be very fast on both
+      the send and receive sides.  Jesse also describes the challenges in
+      implementing STT and his view of STT's future.
+    </p>
+
+    <p>
+      Whereas STT was designed as a performance hack for existing network
+      cards, Geneve, the second encapsulation that Jesse designed and
+      implemented in Open vSwitch, addresses the paucity of metadata that the
+      existing tunneling protocols supported.  GRE, for example, supports a
+      32-bit key, VXLAN supports a 24-bit VNI, STT a 64-bit key, and so on.
+      None of them supported a large or flexible amount.  Geneve, on the other
+      hand, supports an almost arbitrary number of type-length-value (TLV)
+      options, intended to be future-proof.  Geneve has been working its way
+      through the IETF for about 3 1/2 years.
+    </p>
+
+    <p>
+      Jesse talks about NSH (Network Service Header), which is often mentioned
+      in conjunction with Geneve.  NSH has some specialization for service
+      function changing, whereas Geneve takes a more general-purpose stance.
+      NSH does support TLVs, but its primary focus is on a fixed number of
+      fixed-size headers that it keeps in the packet, and that is what most
+      implementations of Geneve actually implement.  NSH can used inside L2 or
+      L3, whereas Geneve as currently runs only inside L3.  Jesse discusses
+      pros and cons to each design.
+    </p>
+
+    <p>
+      Jesse discusses MTU issues in tunneling and encapsulation, which come up
+      because they techniques add bytes to each packet, making packets that are
+      maximum length before encapsulation exceed the MTU.  Jesse says that the
+      solution to MTU problems depends on the use case: for example, in data
+      center use cases, a simple solution can be to increase the MTU of the
+      physical network.  In the pre-1.10 era, Open vSwitch supported path MTU
+      discovery for tunnels, and Jesse describes why it was dropped and what it
+      would take to reintroduce it.
+    </p>
+
+    <p>
+      Jesse describes CAPWAP tunneling, why OVS implemented it, and why OVS
+      dropped support.
+    </p>
+
+    <p>
+      Jesse describes GTP tunneling and the potential for including it in OVS,
+      as well as ERSPAN encapsulation.
+    </p>
+
+    <p>
+      Jesse describes the challenges of encapsulations for IP (as opposed to
+      encapsulations for Ethernet).
+    </p>
+
+    <p>
+      Jesse lays out some thoughts on the future of tunneling in Open vSwitch.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Mon, 26 Sep 2016 04:10:59 GMT</pubDate>
+</item>

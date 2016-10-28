@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>OVN Launch! with Russell Bryant from Red Hat</title>
+  <description>
+    <p>
+      OVN is a network virtualization system that has been under development as
+      part of the Open vSwitch project over about the last two years.  On this
+      podcast, Ben Pfaff and Russell Bryant, two major contributors to OVN,
+      describe OVN, its architecture, its features, focusing on features that
+      were added in the recent release of Open vSwitch 2.6, and some future
+      directions.
+    </p>
+
+    <p>
+      This episode is based on the material presented at the OpenStack Summit
+      in the session titled ``OVN - Moving to Production.''  <a
+      href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15278/ovn-moving-into-production">The
+      summit talk</a> was recorded and <a
+      href="https://www.openstack.org/videos/video/ovn-moving-into-production-1">video</a>
+      and <a
+      href="http://openvswitch.org/support/slides/OVN_Barcelona.pdf">slides</a>
+      are available.  This podcast follows the structure of the slides pretty
+      closely, making them a useful companion document to look at while
+      listening, but the episode is meant to stand alone.
+    </p>
+
+    <p>
+      Resources mentioned in this episode:
+    </p>
+
+    <ul>
+      <li>
+        Discussion of databases for OVN: <a
+        href="http://openvswitch.org/pipermail/dev/2016-March/067539.html">ovs-dev
+        list archive</a>.
+      </li>
+      
+      <li>
+        Continuous integration keynote, ``Demoing the World's Largest
+        Multi-Cloud CI Application'': <a
+        href="https://www.openstack.org/videos/video/demoing-the-worlds-largest-multi-cloud-ci-application">video</a>.
+      </li>
+
+      <li>
+        OVN SFC talk, ``Delivering OpenStack NFV Service Chaining at Scale with
+        Networking-SFC and Networking-OVN'': <a
+        href="https://www.openstack.org/videos/video/delivering-openstack-nfv-service-chaining-at-scale-with-networking-sfc-and-networking-ovn">video</a>.
+      </li>
+
+      <li>
+        Open vSwitch/OVN <a href="https://github.com/openvswitch/ovs">Git repository</a> at Github.
+      </li>
+
+      <li>
+        Open vSwitch <a
+        href="http://mail.openvswitch.org/mailman/listinfo/dev">development</a>
+        and <a
+        href="http://mail.openvswitch.org/mailman/listinfo/discuss">general
+        discussion</a> mailing lists.  (You can also reach the list archives
+        from these pages.)
+      </li>
+
+      <li>
+        ovn-kubernetes integration <a href="https://github.com/openvswitch/ovn-kubernetes">Git repository</a> at Github.
+      </li>
+
+      <li>
+        <a href="https://blog.russellbryant.net/">Russell Bryant's blog</a>.
+      </li>
+
+      <li>
+        Open vSwitch 2016 Fall Conference, to be held Nov. 7 and 8 in San Jose
+        California, <a
+        href="http://events.linuxfoundation.org/events/open-vswitch-2016-fall-conference">details</a>,
+        <a
+        href="http://events.linuxfoundation.org/events/open-vswitch-2016-fall-conference/program/agenda">agenda</a>,
+        and (until Nov. 7) <a
+        href="https://www.regonline.com/Register/Checkin.aspx?EventID=1878555&amp;_ga=1.206464144.200295404.1470753152">online
+        registration</a>.
+      </li>
+    </ul>
+
+    <p>
+      Russell Bryant is a software developer in Red Hat's Office of the CTO.
+      You can find him at <a
+      href="https://blog.russellbryant.net/">russellbryant.net</a> or on
+      Twitter as <a
+      href="https://twitter.com/russellbryant">@russellbryant</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Fri, 28 Oct 2016 22:28:03 GMT</pubDate>
+</item>

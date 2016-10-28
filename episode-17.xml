@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Debugging OpenStack Problems using a State Graph Approach, with Yong Xiang from Tsinghua University</title>
+  <description>
+    <p>
+      <a
+      href="http://www.cs.tsinghua.edu.cn/publish/csen/4623/2010/20101224195501579371325/20101224195501579371325_.html">Yong
+      Xiang</a> is an associate professor at Tsinghua University.  This episode
+      is a recording of his talk during <a
+      href="http://www.cs.hku.hk/apsys2016/program.html">APSys 2016</a>, the
+      Asia-Pacific Workshop on Systems, on Aug. 5, based on <a
+      href="http://dl.acm.org/citation.cfm?id=2967366">Debugging OpenStack
+      Problems Using a State Graph Approach</a>, written with co-authors Hu Li,
+      Sen Wang, Charley Peter Chen, and Wei Xu, which was awarded ``best
+      paper'' at the conference.  A preprint of the paper is also available <a
+      href="https://arxiv.org/abs/1606.05963">at arxiv.org</a>.
+    </p>
+
+    <p>
+      <a
+      href="http://iiis.tsinghua.edu.cn/~weixu/files/apsys-yong-slides.pdf">Slides</a>
+      from the talk are available.  It is probably easier to follow the talk if
+      you have the slides available, but it is certainly not necessary.
+    </p>
+
+    <p>
+      This is a very practical paper that seeks ways to make it easier for
+      non-experts to troubleshoot and debug an OpenStack deployment.  Its
+      abstract is:
+    </p>
+
+    <blockquote>
+      It is hard to operate and debug systems like OpenStack that integrate
+      many independently developed modules with multiple levels of
+      abstractions. A major challenge is to navigate through the complex
+      dependencies and relationships of the states in different modules or
+      subsystems, to ensure the correctness and consistency of these states. We
+      present a system that captures the runtime states and events from the
+      entire OpenStack-Ceph stack, and automatically organizes these data into
+      a graph that we call system operation state graph (SOSG). With SOSG we
+      can use intuitive graph traversal techniques to solve problems like
+      reasoning about the state of a virtual machine. Also, using a graph-based
+      anomaly detection, we can automatically discover hidden problems in
+      OpenStack. We have a scalable implementation of SOSG, and evaluate the
+      approach on a 125-node production OpenStack cluster, finding a number of
+      interesting problems.
+    </blockquote>
+
+    <p>
+      The first question at the end of the talk comes from me, with an answer
+      assisted by the paper's coauthor Wei Xu, and the second one from <a
+      href="http://www.cse.iitd.ernet.in/~sbansal/">Sorav Bansal</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Thu, 13 Oct 2016 14:22:16 GMT</pubDate>
+</item>
