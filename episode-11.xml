@@ -112,14 +112,12 @@
 
     <p>
       John and Ben discuss related work in P4 and eBPF.  Thomas Graf's
-      eBPF-based work on Cilium, discussed in <a
-      href="https://ovsorbit.benpfaff.org/#e4">Episode 4</a>, leans more toward
-      orchestration and scale over a large system than as a general-purpose
-      switch.  Ethan Jackson's work on SoftFlow, discussed in <a
-      href="https://ovsorbit.benpfaff.org/#e10">Episode 10</a>, is more about
-      how to integrate state with Open vSwitch.  Muhammad Shahbaz's work on
-      integrating P4 into Open vSwitch, discussed in <a
-      href="https://ovsorbit.benpfaff.org/#e9">Episode 9</a>, can benefit from
+      eBPF-based work on Cilium, discussed in <a href="#e4">Episode 4</a>,
+      leans more toward orchestration and scale over a large system than as a
+      general-purpose switch.  Ethan Jackson's work on SoftFlow, discussed in
+      <a href="#e10">Episode 10</a>, is more about how to integrate state with
+      Open vSwitch.  Muhammad Shahbaz's work on integrating P4 into Open
+      vSwitch, discussed in <a href="#e9">Episode 9</a>, can benefit from
       John's experience using LLVM.
     </p>
 

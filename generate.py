@@ -6,7 +6,7 @@ import os
 import subprocess
 import re
 
-base_url = 'http://ovsorbit.benpfaff.org'
+base_url = 'https://ovsorbit.org'
 def parse_file(name):
     file = open(name)
     s = file.read().replace('${baseurl}', base_url).replace("``", "&#x201c;").replace("''", "&#x201d;")
@@ -63,14 +63,14 @@ for d in episodes:
     newDesc.appendChild(e.createTextNode(s))
     desc.parentNode.replaceChild(newDesc, desc)
 
-    # <enclosure length="32546740" type="audio/mpeg" url="http://ovsorbit.benpfaff.org/episode-1.mp3"/>
+    # <enclosure length="32546740" type="audio/mpeg" url="https://ovsorbit.org/episode-1.mp3"/>
     elem = e.createElement('enclosure')
     elem.setAttribute('length', '%d' % size)
     elem.setAttribute('type', 'audio/mpeg')
     elem.setAttribute('url', '%s/episode-%d.mp3' % (base_url, i))
     e.documentElement.appendChild(elem)
 
-    # <guid>http://ovsorbit.benpfaff.org/episode-1</guid>
+    # <guid>https://ovsorbit.org/episode-1</guid>
     elem = e.createElement('guid')
     elem.appendChild(e.createTextNode('%s/episode-%d' % (base_url, i)))
     e.documentElement.appendChild(elem)
