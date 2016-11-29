@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-  <title>OVS in Production, with Chad Norgan from Rackspace</title>
+  <title>OVS in Production</title>
+  <guests>Chad Norgan from Rackspace</guests>
   <description>
     <p>
       Interview with Chad Norgan of Rackspace, about use of Open vSwitch at

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-  <title>Debugging OpenStack Problems using a State Graph Approach, with Yong Xiang from Tsinghua University</title>
+  <title>Debugging OpenStack Problems using a State Graph Approach</title>
+  <guests>Yong Xiang from Tsinghua University</guests>
   <description>
     <p>
       <a

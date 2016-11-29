@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-<title>Porting OVS to Hyper-V, with Alessandro Pilotti from Cloudbase</title>
+  <title>Porting OVS to Hyper-V</title>
+  <guests>Alessandro Pilotti from Cloudbase</guests>
 <description>
   <p>
     An interview with Alessandro Pilotti of Cloudbase, which Alessandro

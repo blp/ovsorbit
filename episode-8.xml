@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-  <title>Mininet, with Bob Lantz and Brian O'Connor from ON.LAB</title>
+  <title>Mininet</title>
+  <guests>Bob Lantz and Brian O'Connor from ON.LAB</guests>
   <description>
     <p>
       Interview with Bob Lantz and Brian O'Connor of <a

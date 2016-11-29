@@ -12,15 +12,20 @@ def parse_file(name):
     s = file.read().replace('${baseurl}', base_url).replace("``", "&#x201c;").replace("''", "&#x201d;")
     return xml.dom.minidom.parseString(s)
 
-def get_elem(parent, name):
+def get_optional_elem(parent, name):
     for elem in parent.childNodes:
         if elem.nodeType == elem.ELEMENT_NODE and elem.nodeName == name:
             return elem
-    assert False
+    return None
+
+def get_elem(parent, name):
+    e = get_optional_elem(parent, name)
+    assert e is not None
+    return e
 
 rss_skel = parse_file('rss-skel.xml')
 episodes = []
-for i in range(1, 19):
+for i in range(1, 21):
     e = parse_file('episode-%d.xml' % i)
     size = os.stat('episode-%d.mp3' % i).st_size
     runtime = int(subprocess.check_output(['mp3info', '-p', '%S', 'episode-%d.mp3' % i]))
@@ -54,6 +59,14 @@ for d in episodes:
     size = d['size']
     runtime = d['runtime']
 
+    guests = get_optional_elem(e.documentElement, 'guests')
+    if guests:
+        title = get_optional_elem(e.documentElement, 'title')
+        title.appendChild(e.createTextNode(', with '))
+        for node in guests.childNodes:
+            title.appendChild(node)
+        guests.parentNode.removeChild(guests)
+
     # Escape all the XML in description.
     desc = get_elem(e.documentElement, 'description')
     s = ''
@@ -70,9 +83,12 @@ for d in episodes:
     elem.setAttribute('url', '%s/episode-%d.mp3' % (base_url, i))
     e.documentElement.appendChild(elem)
 
-    # <guid>https://ovsorbit.org/episode-1</guid>
+    # This should remain constant regardless of where the podcast moves
+    # to avoid changing the GUID for an episode, which confuses clients.
+    #
+    # <guid>http://ovsorbit.benpfaff.org/episode-1</guid>
     elem = e.createElement('guid')
-    elem.appendChild(e.createTextNode('%s/episode-%d' % (base_url, i)))
+    elem.appendChild(e.createTextNode('http://ovsorbit.benpfaff.org/episode-%d' % (i)))
     e.documentElement.appendChild(elem)
 
     # <itunes:duration>HH:MM:SS</itunes:duration>
@@ -119,17 +135,27 @@ for d in reversed(episodes):
     for elem in get_elem(e.documentElement, 'title').childNodes:
         title += elem.toxml()
 
+    guests = ''
+    guests_node = get_optional_elem(e.documentElement, 'guests')
+    if guests_node is not None:
+        guests += ", with "
+        for elem in guests_node.childNodes:
+            guests += elem.toxml()
+
     link = '<a href="episode-%d.mp3">MP3</a>' % i
     mp3info = '%d MB, %d min' % (
         (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
     summary += '''<tr>
-  <td align="right">%d.</td><td><a href="#e%d">%s</a><span class="date"> (%s)</span></td>
+  <td align="right">%d.</td><td><a href="#e%d">%s<span class="guests">%s</span></a><span class="date"> (%s)</span></td>
+  <td align="right"><span class="stars">
+<!--stars %d-->
+  </td>
   <td><span title="%s">%s</span></td>
 </tr>
-''' % (i, i, title, shortdate, mp3info, link)
+''' % (i, i, title, guests, shortdate, i, mp3info, link)
 
-    s = '<h3>Episode %d: <a name="e%d">%s (%s)</a></h3>\n' % (i, i, title, fulldate)
+    s = '<h3>Episode %d: <a name="e%d">%s%s (%s)</a></h3>\n' % (i, i, title, guests, fulldate)
     for elem in get_elem(e.documentElement, 'description').childNodes:
         s += elem.toxml()
     s += '<p>Listen: %s (%s).</p>' % (link, mp3info)
