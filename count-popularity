@@ -1,0 +1,7 @@
+#! /bin/sh
+cd /srv/ovsorbit.benpfaff.org || exit $?
+for episode in $(echo episode-*.mp3); do
+    i=$(echo $episode | sed 's/^episode-\([0-9]*\)\.mp3$/\1/')
+    printf "%d\t" $i
+    zgrep -h "episode-$i.mp3" /var/log/apache2/ovsorbit.log* | awk '{print $1;}'|sort -u|wc -l
+done | sort -n > popularity

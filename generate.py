@@ -148,7 +148,7 @@ for d in reversed(episodes):
 
     summary += '''<tr>
   <td align="right">%d.</td><td><a href="#e%d">%s<span class="guests">%s</span></a><span class="date"> (%s)</span></td>
-  <td align="right"><span class="stars">
+  <td align="left"><span class="stars">
 <!--stars %d-->
   </td>
   <td><span title="%s">%s</span></td>

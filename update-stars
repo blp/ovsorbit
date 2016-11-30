@@ -1,0 +1,52 @@
+#! /usr/bin/env python
+
+import os
+import re
+
+popularity = []                 # Contains (episode number, #downloads) pairs.
+f = open('popularity')
+while True:
+    line = f.readline()
+    if not line:
+        break
+
+    m = re.match('^([0-9]+)\s+([0-9]+)$', line)
+    assert m
+    episode = int(m.group(1))
+    count = int(m.group(2))
+    popularity += [(episode, count)]
+f.close()
+
+# Sort by popularity
+popularity = sorted(popularity, key=lambda pair: pair[1], reverse=True)
+
+n = len(popularity)
+stars = {}
+for i in range(n):
+    n_stars = (     4 if i * 10 < n
+               else 3 if i * 10 < n * 2
+               else 2 if i * 10 < n * 3
+               else 1 if i * 10 < n * 4
+               else 0)
+    episode, count = popularity[i]
+    stars[episode] = n_stars
+
+fin = open('index.html')
+fout = open('index.html.tmp', mode='w')
+while True:
+    line = fin.readline()
+    if not line:
+        break
+    line = line.rstrip('\n')
+
+    m = re.match('<!--stars ([0-9]+)-->', line)
+    if not m:
+        print >>fout, line
+        continue
+
+    episode = int(m.group(1))
+    n_stars = stars.get(episode, 0)
+    print >>fout, '<!--stars %d-->%s' % (episode, "&#9733;" * n_stars)
+fin.close()
+fout.close()
+os.rename('index.html.tmp', 'index.html')

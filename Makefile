@@ -9,9 +9,13 @@ FILES = \
 	index.html \
 	rss.xml \
 	orbit_*.png \
-	style.css
+	style.css \
+	count-popularity \
+	update-stars
+SRV = /srv/ovsorbit.benpfaff.org
 install: all
-	rsync -P $(FILES) benpfaff.org:/srv/ovsorbit.benpfaff.org
+	rsync -P $(FILES) benpfaff.org:'$(SRV)'
+	ssh benpfaff.org 'cd $(SRV) && ./update-stars'
 .PHONY: install
 
 stats:
