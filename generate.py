@@ -147,13 +147,13 @@ for d in reversed(episodes):
         (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
     summary += '''<tr>
-  <td align="right">%d.</td><td><a href="#e%d">%s<span class="guests">%s</span></a><span class="date"> (%s)</span></td>
-  <td align="left"><span class="stars">
+  <td align="right"><span class="stars">
 <!--stars %d-->
   </td>
+  <td align="right">%d.</td><td><a href="#e%d">%s<span class="guests">%s</span></a><span class="date"> (%s)</span></td>
   <td><span title="%s">%s</span></td>
 </tr>
-''' % (i, i, title, guests, shortdate, i, mp3info, link)
+''' % (i, i, i, title, guests, shortdate, mp3info, link)
 
     s = '<h3>Episode %d: <a name="e%d">%s%s (%s)</a></h3>\n' % (i, i, title, guests, fulldate)
     for elem in get_elem(e.documentElement, 'description').childNodes:
