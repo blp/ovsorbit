@@ -3,7 +3,7 @@
   <channel xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
     <title>OVS Orbit</title>
     <link>${baseurl}/</link>
-    <description>Interviews and topics of interest to Open vSwitch developers and users, hosted by Ben Pfaff.</description>
+    <description>Interviews and topics of interest to Open vSwitch developers and users, published twice a month, hosted and produced by Ben Pfaff.</description>
     <atom:link href="${baseurl}/rss.xml" rel="self"/>
     <language>en-us</language>
     <managingEditor>blp@ovn.org (Ben Pfaff)</managingEditor>

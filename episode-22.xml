@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Benefits of Intent Based Interfaces to IT Infrastructure and Design Problems for Deploying at Scale</title>
+  <guests>Dave Lenrow from Huawei</guests>
+  <description>
+    <p>
+      This episode is a recording of a talk that Dave Lenrow gave at the <a
+      href="http://platformlab.stanford.edu/seminar-fall-2016.html">Stanford
+      Platform Lab Fall Seminar</a> on Dec. 6.  Dave is Chief Architect for
+      Next Generation Data Center and Distinguished Engineer at Huawei. He
+      participates in a wide variety of open source networking projects
+      including ONOS, Open Daylight, OPNFV, opensourcesdn.org, and Open-O. He
+      is Chairman of the ONF North Bound Interface (NBI) WG, and a leader in
+      the OSSDN Boulder open source intent reference software project. He has
+      spent more than 20 years driving innovation in digital technology with an
+      emphasis on networks, storage and media.
+    </p>
+
+    <p>
+      You may want to follow along with Dave's <a
+      href="episode-22-slides.pdf">slides</a>, but the talk makes sense without
+      them.
+    </p>
+
+    <p>
+      The talk's abstract is:
+    </p>
+
+    <blockquote>
+      The ONF’s North Bound Interface Work Group has been advocating a new
+      interface to infrastructure controllers based on describing what is
+      needed from the system, rather than how the system should provide it.
+      We’ve been trying to create a common NBI that would be used by diverse
+      developers and operators to create a network effect and resulting strong
+      platform and ecosystem. We have been describing this approach as Intent
+      Based networking (IBN) and recently published a consensus based document
+      describing the operating principles of such a system. We define an intent
+      based network system as one with a strict separation of
+      application/workload communication intent, from details about how a
+      network system implements and fulfills such intent (mappings). It turns
+      out that the implementation independent part of the description (the
+      intent) has several valuable properties and the promise to share state in
+      a way that allows massive scale and high performance. To fulfill the
+      promise suggested by this new interface and system architecture, we need
+      to get broad collaboration, and we need to solve some difficult system
+      and platform design problems. The goal of this talk is to get feedback
+      and solicit help from the platform lab in solving some of these problems
+      in an open collaboration.  We hope to discuss the role that intent based
+      interfaces could serve in building a big control platform in the coming
+      years.
+    </blockquote>
+
+    <p>
+      <a href="https://cs.stanford.edu/~keithw/">Keith Winstein</a> introduces
+      the talk.
+    </p>
+
+    <p>
+      The first part of the talk is an introduction to intent-based
+      software-defined networking, which Dave summarizes as, ``Don't tell me
+      what to do, tell me what you need.''  Intent describes the problem,
+      whereas traditional CLI commands describe the solution to the problem.
+      In intent, you build a model of the type of workloads you have and let a
+      piece of software decide how to implement it.  Dave gives an analogy to
+      health care, comparing a request for an aspirin (the status quo in
+      networking) to a request to cure a headache (intent-based networking).
+      An intent-based system breaks networking into ``intent'' and ``mapping''
+      layers, where the mapping layer is the one that resolves the intent into
+      protocols and other implementation-level details.
+    </p>
+
+    <p>
+      One of the big benefits of intent comes from the ability to run more than
+      one service.  A lot of existing SDN controllers can support a single
+      application.  Attempting to run more than one application tends to cause
+      them to interfere with each other, since each one tries to modify switch
+      state, such as flow tables, without respecting the other's needs, a
+      ``multiple writers'' problem.
+    </p>
+
+    <p>
+      The second part of the talk, which starts about half an hour in,
+      describes a set of open problems.  Many of these reference the <a
+      href="http://platformlab.stanford.edu/Seminar%20Talks/Big-Control-Expedition-pres-PL-retreat-June2016-v0.1.pdf">Big
+      Control Platform</a>, an ongoing Platform Lab project that seeks to build
+      infrastructure for controlling collaborative device swarms.
+    </p>
+
+    <p>
+      The talk ends with over 20 minutes of questions, beginning at 38:04, from
+      Keith Winstein, <a href="http://web.stanford.edu/~mendel/">Mendel
+      Rosenblum</a>, <a href="http://www-cs-students.stanford.edu/~rlantz/">Bob
+      Lantz</a>, and others.
+    </p>
+    
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper music is
+      <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Sat, 24 Dec 2016 21:43:06 GMT</pubDate>
+</item>

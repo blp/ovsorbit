@@ -11,7 +11,8 @@ FILES = \
 	orbit_*.png \
 	style.css \
 	count-popularity \
-	update-stars
+	update-stars \
+	episode-22-slides.pdf
 SRV = /srv/ovsorbit.benpfaff.org
 install: all
 	rsync -P $(FILES) benpfaff.org:'$(SRV)'
