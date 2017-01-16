@@ -25,7 +25,7 @@ def get_elem(parent, name):
 
 rss_skel = parse_file('rss-skel.xml')
 episodes = []
-for i in range(1, 23):
+for i in range(1, 24):
     e = parse_file('episode-%d.xml' % i)
     size = os.stat('episode-%d.mp3' % i).st_size
     runtime = int(subprocess.check_output(['mp3info', '-p', '%S', 'episode-%d.mp3' % i]))
@@ -42,7 +42,7 @@ for i in range(1, 23):
     if y == datetime.date.today().year:
         shortdate = '%s %s' % (m.group(3), m.group(2).lstrip('0'))
     else:
-        shortdate = '%s %s' % (m.group(3), m.group(2).lstrip('0'), m.group(4))
+        shortdate = '%s %s %s' % (m.group(3), m.group(2).lstrip('0'), m.group(4))
 
     episodes.append({'index': i,
                      'xml': e,
