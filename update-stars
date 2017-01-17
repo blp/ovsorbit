@@ -18,7 +18,9 @@ while True:
 f.close()
 
 # Sort by popularity
-popularity = sorted(popularity, key=lambda pair: pair[1], reverse=True)
+N = len(popularity)
+popularity = sorted(popularity, key=lambda pair: pair[1] * (pair[0] + N),
+                    reverse=True)
 
 n = len(popularity)
 stars = {}
