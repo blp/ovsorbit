@@ -12,26 +12,23 @@
   <body>
     <div id="sidenav" class="sidenav">
       <span class="closebtn">&times;</span>
-      <div class="sidenav-text">
-<!--
-	<a href="rss.xml"><button style="height: 2em; border-radius: 1em"><img src="feed-icon-14x14.png">RSS Feed</button></a>
-	<div id="search">
-	  <input type="text" spellcheck="false" autocomplete="off" name="q" placeholder="Sök" id="search-query" class="search-input">
-	  <span class="search-icon">
-	    <button class="icon nav-search" type="submit" tabindex="-1">
-	      <span> Sök </span>
-	    </button>
-	  </span>
-	</div>
--->
-	<h2>Episodes</h2>
-	${summary}
-      </div>
+      
+      <input type="search" spellcheck="false" autocomplete="off" placeholder="Search..." id="search"></input>
+      <!--
+	  <a href="rss.xml"><button style="height: 2em; border-radius: 1em"><img src="feed-icon-14x14.png">RSS Feed</button></a>
+	  <div id="search">
+	    <span class="search-icon">
+	      <button class="icon nav-search" type="submit" tabindex="-1">
+		<span> Sök </span>
+	      </button>
+	    </span>
+	  </div>
+	  -->
+      <h2 id="episodes">Episodes</h2>
+      ${summary}
     </div>
-    <div id="head-wrap">
-      <div id="head">
-	<h1><span class="openbtn">&#9776;</span> OVS Orbit</h1>
-      </div>
+    <div id="head">
+      <h1><span class="openbtn">&#9776;</span> OVS Orbit</h1>
     </div>
     <div id="main">
       <div class="logo"><img src="orbit_144x144.png" class="logo"></div>

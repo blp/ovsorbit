@@ -148,8 +148,8 @@ for d in reversed(episodes):
     mp3info = '(%d MB, %d min)' % (
         (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
-    summary += '''<p><a href="#e%d">%d. %s<span class="guests">%s</span></a></p>
-''' % (i, i, title, guests)
+    summary += '''<p id="pe%d"><a href="#e%d">%d. %s<span class="guests">%s</span></a></p>
+''' % (i, i, i, title, guests)
 
     panel += '''<span class="truncate"><a href="#e%d">%s%s</a></span><br>
 ''' % (i, title, guests)
