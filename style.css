@@ -1,55 +1,99 @@
 body {
     color: #000;
     background-color:#ffffff;
+    font-family: sans;
+    font-size: 15px;
 }
-
+h1, .logo { text-align: center }
+h1,h2,h3,h4,h5,h6{font-weight:400;margin:10px 0}
 .attribution {
     font-size: 80%;
+    line-height: 1;
 }
 
 a {
-    text-decoration: none;
-    font-weight: 700;
+    font-weight: inherit;
+    color: black;
+    text-decoration: underline;
 }
-a:hover {
-    color:#444;
-}
-a:visited {
-    color:#447099;
-}
-a:link {
-    color:#447099;
-}
+a:hover { color: #666 }
 
 td {
     vertical-align: top;
 }
 
-@media only screen
-and (min-width : 300px)
-and (max-width : 479px) {
-    .stars { display: none }
-    .date { display: none }
-    .guests { display: none }
-    .logo { text-align: center }
-    h1, h2 { text-align: center }
-}
-
-@media only screen
-and (min-width : 480px)
-and (max-width : 799px) {
-    .date { display: none }
-    .guests { display: none }
-    .logo { text-align: center }
-    h1, h2 { text-align: center }
-}
-
-@media only screen
-and (min-width : 800px)
-and (max-width : 1079px) {
-    .guests { display: none }
-    .logo { text-align: center }
-    h1, h2 { text-align: center }
-}
-
 td { border-style: single }
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 250px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    padding-top: 40px;
+    padding-bottom: 500px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    font-size: medium;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    text-decoration: none
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    position: absolute;
+    left: 25px;
+    cursor: pointer;
+}
+
+#main {
+    margin-left: 250px;
+    margin-right: 1%;
+    line-height: 1.5;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+blockquote { margin-right: inherit }
+
+.pure-button:focus{outline:0}
+.pure-button{line-height:normal}
+.pure-button{box-sizing:border-box}
+.pure-button{display:inline-block;zoom:1;white-space:nowrap;vertical-align:middle;text-align:center;cursor:pointer;-webkit-user-drag:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.pure-button{font-family:inherit;font-size:100%;padding:.5em 1em;color:#444;color:rgba(0,0,0,.8);border:1px solid #999;border:transparent;background-color:#E6E6E6;text-decoration:none;border-radius:2px}
+.pure-button:focus,.pure-button:hover{filter:alpha(opacity=90);background-image:-webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));background-image:linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))}
+.pure-button:active{box-shadow:0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;border-color:#000\9}
+.pure-button{letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto;margin:0;border-radius:0;border-right:1px solid #111;border-right:1px solid rgba(0,0,0,.2)}
+.pure-button:first-child{border-top-left-radius:2px;border-bottom-left-radius:2px}
+
+.button{
+  background-color:#F44336;
+  width:60px;
+  height:60px;
+  border-radius:100%;
+  background:#F44336;
+  border:none;
+  outline:none;
+  color:#FFF;
+  font-size:36px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition:.3s;  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

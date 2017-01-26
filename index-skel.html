@@ -3,25 +3,35 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="SHORTCUT ICON" HREF="/favicon.png">
+    <script src="app.js"></script>
     <title>OVS Orbit</title>
   </head>
-  <h1>OVS Orbit Podcast</h1>
-  <div class="logo"><img src="orbit_144x144.png" class="logo"></div>
-  <p>
-    Interviews and topics of interest to Open vSwitch developers and
-    users, published twice a month, hosted and produced by Ben Pfaff.
-  </p>
-  <h2>RSS Feed</h2>
-  <p>
-    Use the <a href="rss.xml"><img src="feed-icon-14x14.png">RSS
-    feed</a> to keep up with new episodes in your favorite podcast
-    listening application.
-  </p>
-  <h2>Episodes</h2>
-  <table>
-    ${summary}
-  </table>
-  ${details}
+  <body>
+    <div id="sidenav" class="sidenav">
+      <a href="#" class="closebtn">&times;</a>
+      <div class="sidenav-text">
+	<a href="rss.xml"><button><img src="feed-icon-14x14.png">RSS Feed</button></a>
+	<h2>Episodes</h2>
+	${summary}
+      </div>
+    </div>
+    <div id="main">
+      <h1><span class="openbtn">&#9776;</span> OVS Orbit</h1>
+      <div class="logo"><img src="orbit_144x144.png" class="logo"></div>
+      <p>
+	Interviews and topics of interest to Open vSwitch developers and
+	users, published twice a month, hosted and produced by Ben Pfaff.
+      </p>
+      <p>
+	Use
+	the <a href="rss.xml"><button><img src="feed-icon-14x14.png">RSS
+	Feed</button></a> to keep up with new episodes in your
+	favorite podcast listening application.
+      </p>
+      ${details}
+    </div>
+  </body>
 </html>

@@ -123,6 +123,7 @@ rss_xml.close()
 
 summary = ''
 details = ''
+panel = ''
 for d in reversed(episodes):
     i = d['index']
     e = d['xml']
@@ -146,23 +147,23 @@ for d in reversed(episodes):
     mp3info = '%d MB, %d min' % (
         (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
-    summary += '''<tr>
-  <td align="right"><span class="stars">
-<!--stars %d-->
-  </td>
-  <td align="right">%d.</td><td><a href="#e%d">%s<span class="guests">%s</span></a><span class="date"> (%s)</span></td>
-  <td><span title="%s">%s</span></td>
-</tr>
-''' % (i, i, i, title, guests, shortdate, mp3info, link)
+    summary += '''<p><a href="#e%d">%d. %s<span class="guests">%s</span></a></p>
+''' % (i, i, title, guests)
 
-    s = '<h3>Episode %d: <a name="e%d">%s%s (%s)</a></h3>\n' % (i, i, title, guests, fulldate)
+    panel += '''<span class="truncate"><a href="#e%d">%s%s</a></span><br>
+''' % (i, title, guests)
+
+    s = '<div data-role="page" id="e%d"><h3>Episode %d: %s%s (%s)</h3>\n' % (i, i, title, guests, fulldate)
     for elem in get_elem(e.documentElement, 'description').childNodes:
         s += elem.toxml()
-    s += '<p>Listen: %s (%s).</p>' % (link, mp3info)
+    s += '<p>Listen: %s (%s).</p></div>' % (link, mp3info)
     details += s
 
 file = open('index-skel.html')
-s = file.read().replace('${summary}', summary).replace('${details}', details)
+s = file.read()
+s = s.replace('${summary}', summary)
+s = s.replace('${details}', details)
+s = s.replace('${panel}', panel)
 index_html = open('index.html', 'w')
 index_html.write(s)
 index_html.close()
