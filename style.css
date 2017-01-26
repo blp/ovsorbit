@@ -33,8 +33,6 @@ td { border-style: single }
     top: 0;
     left: 0;
     background-color: #eee;
-    padding-top: 40px;
-    padding-bottom: 500px;
     overflow-x: hidden; /* Disable horizontal scroll */
     font-size: medium;
 }
@@ -54,21 +52,34 @@ td { border-style: single }
 }
 
 .openbtn {
-    position: absolute;
+    position: fixed;
     left: 25px;
     cursor: pointer;
 }
 
 #main {
-    margin-left: 250px;
+    padding-left: 250px;
     margin-right: 1%;
     line-height: 1.5;
+    margin-top: 100px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+#head-wrap {
+    position: fixed;
+    padding-left: 250px;
+    background: #fff;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 799px) {
+    .sidenav { left: -250px;}
+    #main { padding-left: 1%;}
+    #head-wrap { padding-left: 1%;}
 }
 
 blockquote { margin-right: inherit }
@@ -96,4 +107,75 @@ blockquote { margin-right: inherit }
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition:.3s;  
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#search {
+    float: right;
+    font-size: 12px;
+    margin: 7px 92px 0 7px;
+	}
+#search-query {
+    background-color: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 21px;
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.8);
+    display: block;
+    font-size: 12px;
+    height: 32px;
+    line-height: 1;
+    padding: 5px 27px 6px 12px;
+    transition: all 0.2s ease-in-out 0s;
+    width:100%;
+    outline:none;
+	}
+#search-query::-webkit-input-placeholder {
+	line-height:18px;
+	height:18px;
+	}
+
+#search-query:focus {
+	box-shadow:none;
+	text-shadow:none;
+	background-color:#fff;
+	color:#666;
+	}
+.search-icon {
+    font-size: 12px;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    position: absolute;
+    right: 2px;
+    top: 0;
+    width: 26px;
+	z-index: 3;
+	text-align: left;
+	}
+button.icon.nav-search {
+	border: 0 none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: text-top;
+    height: 14px;
+    width: 14px;
+	background-position: -20px -710px;
+    background-color: transparent;
+    margin-left: 7px;
+    margin-top: 6px;
+    cursor:pointer;
+	}
+button.icon.nav-search span {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+	}
+div:target {
+  padding-top: 40px; 
+  margin-top: -40px;
 }
