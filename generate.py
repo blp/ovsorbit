@@ -143,8 +143,9 @@ for d in reversed(episodes):
         for elem in guests_node.childNodes:
             guests += elem.toxml()
 
-    link = '<a href="episode-%d.mp3">MP3</a>' % i
-    mp3info = '%d MB, %d min' % (
+    mp3file = "episode-%d.mp3" % i
+    link = '<a href="%s">MP3</a>' % mp3file
+    mp3info = '(%d MB, %d min)' % (
         (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
     summary += '''<p><a href="#e%d">%d. %s<span class="guests">%s</span></a></p>
@@ -156,7 +157,7 @@ for d in reversed(episodes):
     s = '<div data-role="page" id="e%d"><h3>Episode %d: %s%s (%s)</h3>\n' % (i, i, title, guests, fulldate)
     for elem in get_elem(e.documentElement, 'description').childNodes:
         s += elem.toxml()
-    s += '<p>Listen: %s (%s).</p></div>' % (link, mp3info)
+    s += '<p><a href="%s"><button style="height: 2em; border-radius: 1em">Listen to MP3 %s</button></a></p></div>' % (mp3file, mp3info)
     details += s
 
 file = open('index-skel.html')
