@@ -157,7 +157,7 @@ for d in reversed(episodes):
     s = '<div data-role="page" id="e%d"><h3>Episode %d: %s%s (%s)</h3>\n' % (i, i, title, guests, fulldate)
     for elem in get_elem(e.documentElement, 'description').childNodes:
         s += elem.toxml()
-    s += '<p><a href="%s"><button style="height: 2em; border-radius: 1em">Listen to MP3 %s</button></a></p></div>' % (mp3file, mp3info)
+    s += '<p><a href="%s"><button style="height: 2em; border-radius: 1em">Listen to MP3 %s.</button></a></p></div>' % (mp3file, mp3info)
     details += s
 
 file = open('index-skel.html')
