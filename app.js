@@ -19,8 +19,11 @@ var main = function() {
     });
     function search(target) {
         target = target.toLowerCase();
-        for (var i = 1; i <= 23; i++) {
+        for (var i = 1; ; i++) {
             var ptr = $("#pe" + i);
+            if (!ptr.length) {
+                break;
+            }
             if ($("#e" + i).text().toLowerCase().indexOf(target) >= 0) {
                 ptr.show();
             } else {
