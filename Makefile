@@ -8,6 +8,7 @@ FILES = \
 	feed-icon-*.png \
 	index.html \
 	rss.xml \
+	app.js \
 	orbit_*.png \
 	style.css \
 	count-popularity \

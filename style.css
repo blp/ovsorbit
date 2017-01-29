@@ -1,55 +1,95 @@
 body {
     color: #000;
     background-color:#ffffff;
+    font-family: sans;
+    font-size: 15px;
 }
-
+h1, .logo {
+    text-align: center
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight:400;
+    margin:10px 0
+}
 .attribution {
     font-size: 80%;
+    line-height: 1;
+}
+blockquote {
+    margin-right: inherit
 }
 
 a {
-    text-decoration: none;
-    font-weight: 700;
+    font-weight: inherit;
+    color: black;
+    text-decoration: underline;
 }
-a:hover {
-    color:#444;
+a:hover { color: #666 }
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    overflow-x: hidden;
+    font-size: medium;
 }
-a:visited {
-    color:#447099;
+.sidenav a {
+    text-decoration: none
 }
-a:link {
-    color:#447099;
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
-td {
-    vertical-align: top;
+.openbtn {
+    position: fixed;
+    left: 25px;
+    cursor: pointer;
 }
 
-@media only screen
-and (min-width : 300px)
-and (max-width : 479px) {
-    .stars { display: none }
-    .date { display: none }
-    .guests { display: none }
-    .logo { text-align: center }
-    h1, h2 { text-align: center }
+#main {
+    padding-left: 250px;
+    margin-right: 1%;
+    line-height: 1.5;
+    margin-top: 40px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-@media only screen
-and (min-width : 480px)
-and (max-width : 799px) {
-    .date { display: none }
-    .guests { display: none }
-    .logo { text-align: center }
-    h1, h2 { text-align: center }
+#head {
+    position: fixed;
+    padding-left: 250px;
+    background: #fff;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+}
+div:target {
+  padding-top: 40px; 
+  margin-top: -40px;
 }
 
-@media only screen
-and (min-width : 800px)
-and (max-width : 1079px) {
-    .guests { display: none }
-    .logo { text-align: center }
-    h1, h2 { text-align: center }
+@media screen and (max-width: 799px) {
+    .sidenav { left: -250px;}
+    #main { padding-left: 1%;}
+    #head { padding-left: 1%;}
 }
 
-td { border-style: single }
+#search {
+    width: 150px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+button, #search {
+    height: 2em;
+    border-radius: 1em;
+}
