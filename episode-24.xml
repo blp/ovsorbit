@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Software Synthesis for Networks</title>
+  <guests>Nate Foster from Cornell</guests>
+  <description>
+    <p>
+      Nate Foster is an Associate Professor of Computer Science at Cornell
+      University and a Visiting Researcher at Barefoot Networks. The goal of
+      his research is developing programming languages and tools for building
+      reliable systems. He received a PhD in Computer Science from the
+      University of Pennsylvania in 2009, an MPhil in History and Philosophy of
+      Science from Cambridge University in 2008, and a BA in Computer Science
+      from Williams College in 2001. His awards include a Sloan Research
+      Fellowship, an NSF CAREER Award, a Most Influential POPL Paper Award, a
+      Tien ’72 Teaching Award, a Google Research Award, a Yahoo! Academic
+      Career Enhancement Award, and the Morris and Dorothy Rubinoff Award.
+    </p>
+
+    <p>
+      This is a recording of a talk that Nate gave at the <a
+      href="http://netseminar.stanford.edu/">Stanford Networking Seminar</a>,
+      organized by <a href="mailto:lavanyaj@cs.stanford.edu">Lavanya Jose</a>
+      and <a href="mailto:ecidon@stanford.edu">Eyal Cidon</a>, on December 8,
+      2016.  <a
+      href="http://netseminar.stanford.edu/seminars/12_08_16.pdf">Slides</a>
+      and <a href="https://youtu.be/u4l5FtJI48E">video</a> (recorded by the
+      organizers) are also available.
+    </p>
+
+    <p>
+      Nate describes this talk as:
+    </p>
+
+    <blockquote>
+      <p>
+        Software synthesis is a powerful technique that can dramatically
+        increase the productivity of programmers by automating the construction
+        of complex code. One area where synthesis seems particularly promising
+        is in computer networks. Although SDN architectures make it possible to
+        build rich applications in software, programmers today are forced to
+        deal with numerous low-level details such as encoding high-level
+        policies using low-level hardware primitives, processing asynchronous
+        events, dealing with unexpected failures, etc.
+      </p>
+
+      <p>
+        This talk will present highlights from recent work using synthesis to
+        generate correct-by-construction network programs. In the first part of
+        the talk, I will describe an approach for generating configuration
+        updates that are guaranteed to preserve specified invariants. In the
+        second part of the talk, I will present an extension that supports
+        finer-grained updates triggered by data-plane events.
+      </p>
+
+      <p>
+        Joint work with Pavol Cerny (University of Colorado at Boulder),
+        Jedidiah McClurg (University of Colorado at Boulder), Hossein Hojjat
+        (Rochester Institute of Technology), Andrew Noyes (Google), and Todd
+        Warszawski (Stanford University).
+      </p>
+    </blockquote>
+
+    <p>
+      <a href="http://yuba.stanford.edu/~nickm/">Nick McKeown</a> introduces
+      the talk.
+    </p>
+
+    <p>
+      To get the most from this talk, listen to it along while viewing the <a
+      href="http://netseminar.stanford.edu/seminars/12_08_16.pdf">slides</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Sun, 29 Jan 2017 18:08:13 GMT</pubDate>
+</item>
