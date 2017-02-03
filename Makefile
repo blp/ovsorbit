@@ -9,6 +9,7 @@ FILES = \
 	index.html \
 	rss.xml \
 	app.js \
+	jquery-1.11.3.min.js \
 	orbit_*.png \
 	style.css \
 	count-popularity \
