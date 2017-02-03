@@ -147,8 +147,8 @@ for d in reversed(episodes):
     mp3info = '(%d MB, %d min)' % (
         (size + 512 * 1024) / (1024 * 1024), (runtime + 30) / 60)
 
-    summary += '''<p id="pe%d"><a href="#e%d">%d. %s<span class="guests">%s</span></a></p>
-''' % (i, i, i, title, guests)
+    summary += '''<p id="pe%d"><a href="#e%d">%d. %s%s</a><a href="%s"><button>&#9654;</button></a></p>
+''' % (i, i, i, title, guests, mp3file)
 
     s = '<div data-role="page" id="e%d"><h3>Episode %d: %s%s (%s)</h3>\n' % (i, i, title, guests, fulldate)
     for elem in get_elem(e.documentElement, 'description').childNodes:
