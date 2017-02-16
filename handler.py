@@ -1,13 +1,17 @@
 #!/usr/bin/env python
 
-from cgi import escape
+import cgi
 import Cookie
 import json
 import os
+import requests
 import sys
 import urlparse
 import uuid
 import flup.server.fcgi
+
+import cgitb
+cgitb.enable()
 
 # Returns the session UUID, either taken from the session cookie or a
 # freshly generated session.
@@ -44,29 +48,47 @@ def read_session_state(session):
     f.close()
     return state
 
-def app(environ, start_response):
-    session = get_session(environ)
-    state = read_session_state(session)
+session = get_session(os.environ)
+state = read_session_state(session)
 
-    # Start response.
-    headers = [('Content-Type', 'text/html')]
-    session_cookie = Cookie.SimpleCookie()
-    session_cookie['session'] = str(session)
-    session_cookie['session']["Path"] = '/'
-    headers.extend(("Set-Cookie", morsel.OutputString())
-                   for morsel
-                   in session_cookie.values())
-    start_response('200 OK', headers)
+fields = cgi.FieldStorage()
+r = None
+r2 = None
+access_token = ''
+username = ''
+if 'code' in fields:
+    code = fields['code'].value
+    r = requests.post('https://github.com/login/oauth/access_token',
+                      headers={'Accept': 'application/json'},
+                      data={'client_id': os.environ['GITHUB_CLIENT_ID'],
+                            'client_secret': os.environ['GITHUB_CLIENT_SECRET'],
+                            'code': code})
+    access_token = r.json()['access_token']
 
-    yield '<h1>FastCGI Environment</h1>\n'
-    yield '<table>\n'
-    for k, v in sorted(environ.items()):
-        try:
-            if not k.endswith('SECRET'):
-                yield '<tr><th>%s</th><td>%s</td></tr>\n' % (escape(k), escape(v))
-        except:
-            pass
-    yield '<tr><th>uid</th><td>%d</td></tr>' % os.getuid()
-    yield '</table>\n'
+    r2 = requests.get('https://api.github.com/user',
+                      headers={'Authorization': 'token %s' % access_token,
+                               'Accept': 'application/vnd.github.v3+json'})
+    state['username'] = r2.json()['login']
+    state['name'] = r2.json()['name']
 
-flup.server.fcgi.WSGIServer(app).run()
+# Start response.
+print("Content-Type: text/html")
+print("Set-Cookie: %s" % session)
+print("")
+
+if r:
+    print str(r.json())
+if r2:
+    print unicode(r2.text)
+print '<h1>FastCGI Environment</h1>\n'
+print '<table>\n'
+print '<tr><th>%s</th><td>%s</td></tr>\n' % ('access_token', str(access_token))
+print '<tr><th>%s</th><td>%s</td></tr>\n' % ('username', str(username))
+for k, v in sorted(os.environ.items()):
+    try:
+        if not k.endswith('SECRET'):
+            print '<tr><th>%s</th><td>%s</td></tr>\n' % (cgi.escape(k), cgi.escape(v))
+    except:
+        pass
+print '<tr><th>uid</th><td>%d</td></tr>' % os.getuid()
+print '</table>\n'
