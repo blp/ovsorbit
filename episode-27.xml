@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>DragonFlow</title>
+  <guests>Omer Anson from Huawei</guests>
+  <description>
+    <p>
+      Omer Anson is a software developer at Huawei.  I caught up with him at
+      OpenStack Barcelona back in October to talk about the <a
+      href="https://wiki.openstack.org/wiki/Dragonflow">Dragonflow</a> project,
+      which is a distributed SDN controller for OpenStack Neutron that supports
+      logical switching and routing and more advanced features.
+    </p>
+
+    <p>
+      According to Omer, Dragonflow distinguishes itself from other Neutron
+      drivers by aiming at scale.  It intends to scale to thousands or even
+      tens of thousands of compute nodes (hypervisors).  It also focuses on
+      scale testing, testing in simulation with 4,000 nodes with very good
+      results, showing a slowdown of only about 5% between 30 nodes and 4,000
+      nodes for control plane operations such as creating subnets or ports.
+    </p>
+
+    <p>
+      Dragonflow features include fully distributed DHCP and ARP responders.
+      The latter feature reduces the amount of broadcast traffic within a
+      cloud.  Dragonflow can integrate physical devices and even remote clouds
+      into a logical network through its ``remote device'' functionality.
+    </p>
+
+    <p>
+      The Dragonflow implementation currently builds on top of OpenFlow with
+      Nicira extensions (as implemented by Open vSwitch).  The developers are
+      also considering adding support for BPF or P4 datapaths.
+    </p>
+
+    <p>
+      The Dragonflow design emphasizes pluggability:
+    </p>
+
+    <blockquote>
+      My vision is—our vision is—that everything—every Neutron API that
+      exists—will be written as a Dragonflow application.  Currently,
+      Dragonflow itself does very little to nothing with creating flows and
+      instructing the policy of how packets move.  Everything is done through
+      applications.  We have an L2 application which detects the MAC addresses
+      and knows how to direct them to the correct ports, we have an L3
+      application... that knows to detect when packets are supposed to reach
+      the router and have the layer-2 addresses replaced...
+    </blockquote>
+
+    <p>
+      DragonFlow supports, for example, running on top of any of several
+      database systems.  The diversity among those databases is vast, which
+      gives users great freedom to choose one that is well suited for their own
+      needs.
+    </p>
+
+    <p>
+      Dragonflow has multiple implementations of L3.  One of these populates
+      flows proactively into Open vSwitch, that is, it adds flows without
+      waiting for packets to arrive at the controller.  The other uses some
+      proactive population along with reactive population, that is, adding
+      flows in response to packet arrival.  Omer explains the rationale for the
+      two implementations and how they work.
+    </p>
+
+    <p>
+      A new feature of Dragonflow is that it is now implemented as an ``ML2
+      mechanism driver'' rather than a Neutron core plugin.  This allows it to
+      better coexist with other Neutron drivers within a single deployment.
+    </p>
+
+    <p>
+      Omer mentions some upcoming development work, such as a better, more
+      user-oriented deployment mechanism and integration with additional
+      projects such as <a href="https://www.ansible.com/">Ansible</a>, the
+      OpenStack <a href="https://wiki.openstack.org/wiki/Kolla">Kolla</a>
+      project, OpenStack <a
+      href="https://docs.openstack.org/developer/puppet-openstack-guide/">Puppet</a>,
+      and more.  Service function chaining support is also in the works.
+    </p>
+
+    <p>
+      The Dragonflow project is seeking new contributors.  You can find the
+      developers in the #openstack-dragonflow channel in the <a
+      href="http://freenode.net/">Freenode</a> IRC network.  Omer's nick
+      on Freenode is "oanson".
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Thu, 16 Mar 2017 02:28:07 GMT</pubDate>
+</item>

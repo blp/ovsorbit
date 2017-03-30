@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Trumpet: Timely and Precise Triggers in Data Center Networks</title>
+  <guests>Minlan Yu from Yale</guests>
+  <description>
+    <p>
+      <a href="http://www.cs.yale.edu/homes/yu-minlan/">Minlan Yu</a> is an
+      associate professor of computer science at Yale and before that at USC.
+      She works in several areas that are relevant to Open vSwitch, including
+      network virtualization and software-defined networking, enterprise and
+      data center networks, and distributed systems.
+    </p>
+
+    <p>
+      We begin by talking about <a
+      href="http://conferences.sigcomm.org/sigcomm/2017/workshop-hotconnet.html">ACM
+      SIGCOMM 2017 1st International Workshop on Hot Topics in Container
+      Networking and Networked Systems</a>, which Minlan is co-chairing.
+      ``HotConNet'' is a new workshop at SIGCOMM this year focusing on
+      networking for containers, which is far from a mature field.  The
+      workshop is accepting 6-page papers until March 24.  Workshop papers will
+      be presented as part of SIGCOMM 2017 in Los Angeles, August 21 to 23.
+    </p>
+
+    <p>
+      The main topic of discussion is <a
+      href="http://www.cs.yale.edu/homes/yu-minlan/writeup/sigcomm16.pdf">Trumpet:
+      Timely and Precise Triggers in Data Centers</a>, published at SIGCOMM in
+      August 2016.  The abstract for this paper is:
+    </p>
+
+    <blockquote>
+      As data centers grow larger and strive to provide tight performance and
+      availability SLAs, their monitoring infrastructure must move from passive
+      systems that provide aggregated inputs to human operators, to active
+      systems that enable programmed control. In this paper, we propose
+      Trumpet, an event monitoring system that leverages CPU resources and
+      end-host programmability, to monitor every packet and report events at
+      millisecond timescales. Trumpet users can express many <em>network-wide
+      events</em>, and the system efficiently detects these events using
+      <em>triggers</em> at end-hosts. Using careful design, Trumpet can
+      evaluate triggers by inspecting every packet at full line rate even on
+      future generations of NICs, scale to thousands of triggers per end-host
+      while bounding packet processing delay to a few microseconds, and report
+      events to a controller within 10 milliseconds, even in the presence of
+      attacks. We demonstrate these properties using an implementation of
+      Trumpet, and also show that it allows operators to describe new network
+      events such as detecting correlated bursts and loss, identifying the root
+      cause of transient congestion, and detecting short-term anomalies at the
+      scale of a data center tenant.
+    </blockquote>
+
+    <p>
+      Afterward, Minlan provides a sneak peak at a paper to be presented at
+      NSDI in March, ``CherryPick: Adaptively Unearthing the Best Cloud
+      Configurations.''  This paper will present an efficient way to choose the
+      best machine type and parameters in a public from among the hundreds of
+      configurations offered by large public clouds.
+    </p>
+
+    <p>
+      Minlan may be contacted via email: minlan.yu (at) yale (dot) edu.  You
+      can also follow her <a href="https://twitter.com/minlanyu">on
+      Twitter</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Thu, 16 Feb 2017 03:01:04 GMT</pubDate>
+</item>

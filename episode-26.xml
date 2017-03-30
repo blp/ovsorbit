@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>The Evolution of OpenFlow</title>
+  <guests>Jean Tourrilhes from HPE Labs and Justin Pettit from VMware</guests>
+  <description>
+    <p>
+      Jean Tourrilhes is a networking researcher at HPE Labs who served as the
+      chair of the Open Networking Foundation's OpenFlow standardization
+      working group (the ``extensibility'' working group) from its inception
+      until 2015.  Justin Pettit, who was a founding employee at Nicira and who
+      has continued to work at VMware since it acquired Nicira in 2012, was
+      co-chair of the working group during the same period.
+    </p>
+
+    <p>
+      Justin and Jean are two of the authors of ``<a
+      href="https://www.opennetworking.org/images/stories/downloads/sdn-resources/IEEE-papers/evolution-of-sdn-and-of.pdf">SDN
+      and Standards Evolution: a Standards Perspective</a>,'' a paper published
+      in IEEE Computer in Nov. 2014.  This paper gives a lot of the facts
+      behind the OpenFlow's evolution, but it doesn't talk at all about what
+      worked well and what didn't in the standardization process.  This
+      discussion tries to cover that part of the story, with the goal of
+      helping listeners to understand how they might better approach any future
+      standardization processes in the future.
+    </p>
+
+    <p>
+      Some of the topics covered include:
+    </p>
+
+    <ul>
+      <li>
+        Tension between advocates for hardware and software switch
+        implementations.
+      </li>
+
+      <li>
+        The debates behind multiple table support.
+      </li>
+
+      <li>
+        Capabilities aka ``table features'' aka ``table type pattern'' support.
+      </li>
+
+      <li>
+        Will increasing flexibility in hardware enable better OpenFlow-like
+        functionality in the future?  At what cost?
+      </li>
+
+      <li>
+        Naivete regarding OpenFlow influence over hardware.
+      </li>
+
+      <li>
+        Secretiveness of hardware vendors and the OpenFlow hardware vendor
+        working group.
+      </li>
+
+      <li>
+        The requirement for prototyping new features added to OpenFlow, along
+        with pluses and minuses for the requirement.
+      </li>
+
+      <li>
+        Different categories of switches, beyond ``hardware'' and ``software''
+        classification.
+      </li>
+
+      <li>
+        Interactions with testing and interoperability working group, and
+        difficulties with NDAs on testing results.
+      </li>
+
+      <li>
+        Lack of OpenFlow reference implementation and Open vSwitch de facto in
+        that role.
+      </li>
+
+      <li>
+        Increased power of the working group chair, compared to the IETF.
+      </li>
+
+      <li>
+        What is the future of OpenFlow?  Is it dying?  Or just entrenched?
+      </li>
+
+      <li>
+        What's a likely successor to OpenFlow?  P4?  eBPF?
+      </li>
+    </ul>
+
+    <p>
+      You can contact Jean via email as <a
+      href="mailto:jt@labs.hpe.com">jt@labs.hpe.com</a> and Justin either via
+      email as <a href="mailto:jpettit@ovn.org">jpettit@ovn.org</a> or on
+      Twitter as <a
+      href="https://twitter.com/Justin_D_Pettit">@Justin_D_Pettit</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Thu, 02 Mar 2017 02:53:05 GMT</pubDate>
+</item>
