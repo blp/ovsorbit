@@ -93,9 +93,9 @@ for d in episodes:
 
     # <itunes:duration>HH:MM:SS</itunes:duration>
     ss = runtime
-    hh = ss / 3600
+    hh = int(ss / 3600)
     ss -= hh * 3600
-    mm = ss / 60
+    mm = int(ss / 60)
     ss -= mm * 60
     elem = e.createElement('itunes:duration')
     elem.appendChild(e.createTextNode('%02d:%02d:%02d' % (hh, mm, ss)))
