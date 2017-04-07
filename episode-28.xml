@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>OVSDB Configuration for Hardware VTEPs</title>
+  <guests>Chandra Appanna from Arista and Bruce Davie from VMware</guests>
+  <description>
+    <p>
+      This episode's guests are Bruce Davie, a vice president CTO for APJ at
+      VMware, and Chandra Appanna, an engineer and manager at Arista, who are
+      two of the designers of the Open vSwitch database schema that can be used
+      to control VXLAN forwarding in top-of-rack switches, often called the
+      OVSDB VTEP schema.
+    </p>
+
+    <p>
+      The discussion in this episode is related to ``<a
+      href="https://ccronline.sigcomm.org/2017/a-database-approach-to-sdn-control-plane-design/">A
+      Database Approach to SDN Control Plane Design</a>,'' by Bruce Davie and
+      several others, published in the January 2017 issue of <a
+      href="https://ccronline.sigcomm.org/">SIGCOMM Computer Communications
+      Review</a>, with the following abstract:
+    </p>
+
+    <blockquote>
+      Software-defined networking (SDN) is a well-known example of a research
+      idea that has been reduced to practice in numerous settings. Network
+      virtualization has been successfully developed commercially using SDN
+      techniques. This paper describes our experience in developing
+      production-ready, multi-vendor implementations of a complex network
+      virtualization system. Having struggled with a traditional network
+      protocol approach (based on OpenFlow) to achieving interoperability among
+      vendors, we adopted a new approach. We focused first on defining the
+      control information content and then used a generic database protocol to
+      synchronize state between the elements. Within less than nine months of
+      starting the design, we had achieved basic interoperability between our
+      network virtualization controller and the hardware switches of six
+      vendors. This was a qualitative improvement on our decidedly mixed
+      experience using OpenFlow. We found a number of benefits to the database
+      approach, such as speed of implementation, greater hardware diversity,
+      the ability to abstract away implementation details of the hardware,
+      clarified state consistency model, and extensibility of the overall
+      system.
+    </blockquote>
+
+    <p>
+      One of the main points in the discussion is why it makes sense to focus
+      on a database schema, rather than on a protocol, as a way of controlling
+      a network switch, and what it means to use a database to control a
+      network.  As Bruce Davie says:
+    </p>
+
+    <blockquote>
+      I think there was a little bit of, ``Well, here's a tool that's lying in
+      our toolkit, let's try to use it,'' but it was also because we spent so
+      much time thinking about the information model.  We realized, like many
+      problems in networking, this really is a state synchronization problem,
+      and that's kind of what database protocols do, so let's see if the one
+      we've got can be made to work.
+    </blockquote>
+
+    <p>
+      Some of the points touched on during the discussion include:
+    </p>
+
+    <ul>
+      <li>
+        History of the VTEP schema.
+      </li>
+
+      <li>
+        The relationship of the meaning of ``virtualization'' in the terms VLAN
+        and VXLAN and VPN, to its meaning in compute and network
+        virtualization.
+      </li>
+
+      <li>
+        Why use OVSDB VTEP instead of something more general, such as OpenFlow,
+        to control physical switch hardware?
+      </li>
+
+      <li>
+        Will networking hardware become generally programmable in the future?
+      </li>
+
+      <li>
+        Similarities of philosophical underpinnings for OVSDB and Arista OS.
+      </li>
+
+      <li>
+        Potential alternatives, if the OVSDB approach had not been taken (BGP?
+        Ad-hoc scripts?) and existing competitors.
+      </li>
+
+      <li>
+        State synchronization as the fundamental value of OVSDB.
+      </li>
+
+      <li>
+        Should databases be used more frequently as a way to implement
+        networking? 
+      </li>
+
+      <li>
+        <p>
+          The process used for developing the OVSDB VTEP schema, compared to
+          the process used for developing IETF specifications.  Chandra's
+          viewpoint is worth quoting:
+        </p>
+
+        <blockquote>
+          To me this felt more familiar, in terms of, this is how the IETF has
+          always tried to do things, ``working code and rough consensus,'' and
+          that's what happened in this case, right?  It solved a real problem,
+          there were enough vendors interested in it.  Nicira/VMware kind of
+          spearheaded it, but they built something that others wanted to
+          participate in, and of course we all gave in a lot of inputs.  The
+          model definitely does make a lot of sense to the hardware vendors,
+          and that's why it succeeded.  We built things in stages, we didn't
+          try to make a perfect solution on day 1, and we actually built
+          working code...  I don't find it a severe contrast to how the IETF
+          still wants to do stuff, but, yeah, sometimes it doesn't happen like
+          that.
+        </blockquote>
+      </li>
+
+      <li>
+        Uses of the OVSDB VTEP schema beyond those originally envisioned by
+        VMware.
+      </li>
+
+      <li>
+        Performance and scale in practice.
+      </li>
+
+      <li>
+        Future directions for the OVSDB VTEP schema (security?
+        microsegmentation?) and the ease of extending its capabilities.
+      </li>
+    </ul>
+
+    <p>
+      You can contact Chandra via email at <a
+      href="mailto:achandra@arista.com">achandra@arista.com</a> and Bruce via
+      Twitter as <a href="https://twitter.com/_drbruced">@_drbruced</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Fri, 31 Mar 2017 15:54:26 GMT</pubDate>
+</item>

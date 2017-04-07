@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>DevPulseCon</title>
+  <guests>Rupa Dachere from VMware</guests>
+  <description>
+    <p>
+      This episode's guest is Rupa Dachere, an engineer at VMware and the
+      executive director and founder of <a
+      href="http://codechix.org/">CodeChix</a>, a 501(c)3 charity dedicated to
+      education, advocacy and mentoring of women engineers in industry and
+      academia.  Rupa founded CodeChix because she found that, regardless of
+      where she worked in the computer industry, she was the only woman on the
+      team, which led to difficulties in advancing and keeping up with
+      technologies that continue to pop up.  The organization started out with
+      small group meetings at Rupa's house, grew slowly through meetups and
+      regular meetings, and now boasts over 400 women engineers as members.
+    </p>
+
+    <p>
+      The topic of this episode is primarily <a
+      href="http://devpulsecon.squarespace.com/">DevPulseCon</a>, a two-day
+      technical and educational micro-conference focused on women engineers,
+      developers, users, administrators and geeks working in industry and
+      academia.  The conference began in 2015 as Coder[xx] with about 100
+      attendees, grew to about 120 in 2016, and this year's edition has already
+      sold over 200 tickets.  DevPulseCon takes place April 20 and 21, at the
+      <a href="http://www.computerhistory.org/">Computer History Museum</a> in
+      Mountain View.  It is sold out, except for a number of tickets reserved
+      for students, who may use discount code <b>STUDENT-FREE</b> to <a
+      href="https://www.eventbrite.com/e/devpulsecon-2017-tickets-31311692114">register
+      for free tickets</a>.
+    </p>
+
+    <p>
+      DevPulseCon has three components: technical talks, panel discussions, and
+      hands-on workshops.  The <a
+      href="http://devpulsecon.squarespace.com/agenda/">full agenda</a> for
+      DevPulseCon is already posted.  For those unable to attend in person, the
+      technical talks and possibly some of the panels will be recorded and made
+      available through the DevPulseCon and CodeChix YouTube channels,
+      alongside the videos that are already available from 2015 and 2016.
+    </p>
+
+    <p>
+      This year DevPulseCon features three panel discussions, which are
+      popular, interactive parts of the conference that tend to run over their
+      time budgets because the audience doesn't want to stop talking.  Rupa is
+      moderating a panel on toxic environments, which tend to affect women more
+      strongly than men, for reasons that are not well established.  To
+      encourage participation, the panels are ``safe space panels,'' meaning
+      that social media use is banned during the panels and attendees are
+      encouraged to forget who says what.
+    </p>
+
+    <p>
+      Rupa gives some advice on interviewing women for engineering roles.  Some
+      of it I had heard before in unconscious bias training, but some of it was
+      new to me and easy to act on:
+    </p>
+
+    <blockquote>
+      With women, you do a little extra background, reading up on what their
+      interests are, what drives them, and then phrase your question along
+      those lines, maybe have a few outlier questions if you think they'll be
+      able to answer it impromptu, and go that way.  Most women like to have a
+      scripted set of questions, to make them feel comfortable when they're
+      going into an interview, so they know what to prep for essentially.
+    </blockquote>
+
+    <p>
+      Rupa says that CodeChix's primary goal is not recruiting of women to
+      engineering roles but retention in engineering roles:
+    </p>
+
+    <blockquote>
+      <p>
+        Recruiting becomes a secondary [goal]... but retention is and always
+        has been the focus for CodeChix and that is mainly because of the way I
+        feel about it.  I've been in the industry, I've been on the technical
+        ladder and actually I've fought to stay on the technical ladder.  Most
+        places they will try to push you into program management, project
+        management, some sort of management track, and you really have to fight
+        to stay on the technical ladder...
+      </p>
+
+      <p>
+        Now that I have CodeChix, I know that I'm not the only one.  That has
+        always been and still is the number one goal of CodeChix, to retain the
+        women engineers who are on the technical ladder, keep them on the
+        technical ladder.  In fact, this year I am going to go ahead and say
+        that I have invited program managers and product managers to the
+        conference—and these are all people with CS degrees and EE degrees,
+        that are very qualified—I want to bring them back into the technical
+        ladder, out of their program management and product management tracks,
+        and see if I can do that...
+      </p>
+
+      <p>
+        I personally feel that it is really a horrible thing if you try to push
+        somebody who is a good engineer out of the technical track into
+        something else that, maybe they might be good at it, maybe they're not
+        good at it, I don't know...  I don't want to waste them because it's so
+        difficult to find good engineers...  Also, I'm tired of being the only
+        female on the team again.
+      </p>
+    </blockquote>
+
+    <p>
+      Ben tells a funny anecdote from the beginning of Nicira, but you'll have
+      to listen to hear it.
+    </p>
+
+    <p>
+      DevPulseCon and CodeChix are available through their websites and all
+      your favorite social media channels.  You may also get in touch with them
+      through email at <a
+      href="mailto:contact@devpulsecon.org">contact@devpulsecon.org</a> or <a
+      href="mailto:contact@codechix.org">contact@codechix.org</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Fri, 07 Apr 2017 05:04:25 GMT</pubDate>
+</item>
