@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>NEAt: Network Error Auto-Correct</title>
+  <guests>Bingzhe Liu</guests>
+  <description>
+    <p>
+      Bingzhe Liu is a first-year PhD student at University of Illinois at
+      Urbana-Champaign.  In this episode, we discuss the paper ``<a
+      href="http://conferences.sigcomm.org/sosr/2017/papers/sosr17-neat.pdf">NEAt:
+      Network Error Auto-Correct</a>,'' by Wenxuan Zhou, Jason Croft, Bingzhe
+      Liu, and Matthew Caesar, which Bingzhe presented on April 4 at <a
+      href="http://conferences.sigcomm.org/sosr/2017/program.html">SOSR</a>,
+      the Symposium on SDN Research.  The abstract for this paper is:
+    </p>
+
+    <blockquote>
+      <p>
+        Configuring and maintaining an enterprise network is a challenging and
+        error-prone process.  Administrators must often consider security
+        policies from a variety of sources simultaneously, including regulatory
+        requirements, industry standards, and to mitigate attack vectors.
+        Erroneous implementation of a policy, however, can result in costly
+        data breaches and intrusions.  Relying on humans to discover and
+        troubleshoot violations is slow and prone to error, considering the
+        speed at which new attack vectors propagate and the increasing network
+        dynamics, partly an effect of SDN. To ensure the network is always in a
+        state consistent with the desired policies, administrators need
+        frameworks to automatically diagnose and repair violations in
+        real-time.
+      </p>
+
+      <p>
+        To address this problem, we present NEAt, a system analogous to a
+        smartphone’s autocorrect feature that enables on-the-fly repair to
+        policy-violating updates.  NEAt modifies the forwarding behavior of
+        updates to automatically repair violations of properties such as
+        reachability, service chaining, and segmentation.  NEAt sits between an
+        SDN controller and the forwarding devices, and intercepts updates
+        proposed by SDN applications.  If an update violates the policy defined
+        by an administrator, such as reachability or segmentation, NEAt
+        transforms the update into one that complies with the policy. Unlike
+        domain-specific languages or synthesis platforms, NEAt allows
+        enterprise networks to leverage the advanced functionality of SDN
+        applications while simultaneously achieving strong, automated
+        enforcement of general policies.
+      </p>
+    </blockquote>
+
+    <p>
+      The paper has contact information for its authors.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+<pubDate>Mon, 01 May 2017 04:07:26 GMT</pubDate>
+</item>
