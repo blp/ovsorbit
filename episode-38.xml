@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Control and Management Plane for IO Modules</title>
+  <guests>Fulvio Risso from Politecnico di Torino</guests>
+  <description>
+    <p>
+      Fulvio Risso is an associate professor at Politecnico di Torino in Turin,
+      Italy.  His research is in the area of high-speed (10+ Gbps) packet
+      processing and especially in programmable networks.  This interview was
+      prompted by Fulvio's presentation ``<a
+      href="http://fulvio.frisso.net/files/17-IOVisorSummit-CtrlMgmtPlane.pdf">A
+      Control and Management Plane for IO Modules</a>'' at the IO Visor Summit
+      held on Feb. 27 in Mountain View (see Quentin Monnet's excellent <a
+      href="https://qmonnet.github.io/whirl-offload/2017/03/03/iovisor-summit-summary/">summary</a>
+      of the summit for more information).
+    </p>
+
+    <p>
+      The episode begins with a few words about <a
+      href="http://opennetworking.kr/projects/ossn/wiki/_">OSSN 2017</a>, the
+      2nd International Workshop on Open-Source Software Networking, which
+      Fulvio co-chairs.  The interview occurred long before the workshop, which
+      took place in early July.  See also the <a
+      href="http://sites.ieee.org/netsoft/workshops/">workshop schedule</a>.
+    </p>
+
+    <p>
+      An IO Module, according to Fulvio, is a kind of marketing term for an
+      eBPF program.  In turn, eBPF is an abstract, portable, safe virtual
+      machine that Linux allows userspace programs to install into the kernel
+      to monitor, augment, or control kernel behavior.  OVS Orbit has
+      previously covered eBPF in <a href="#e4">episode 4</a> on Cilium, <a
+      href="#e23">episode 23</a> on the IO Visor project, and other episodes.
+    </p>
+
+    <p>
+      According to Fulvio, for NFV packet processing, IO Modules have three
+      primary advantages over other approaches.  First, they cab directly
+      injected into a kernel.  Second, potentially, IO Modules can be injected
+      at different layers, for example in the main networking stack or in a
+      networking driver.  Third, eBPF programs are more portable than native
+      code, which can be an important advantage for heterogeneous telco
+      environment.
+    </p>
+
+    <p>
+      Fulvio gives an example of the use of IO Modules for implementing the
+      functionality of a residential network gateway.  IO Modules implement
+      DHCP, routing, NAT, deep packet inspection, etc.  The advantage of an IO
+      Module architecture over the traditional home gateway design is
+      modularity: the IO Module design can be easily changed and adapted to
+      suit a new use case.
+    </p>
+
+    <p>
+      The <a href="https://github.com/iovisor/iomodules">IO Modules</a>
+      repository includes a controller named Hover that is the main method
+      proposed for IO Module deployment and (re)configuration.  Northbound,
+      Hover provides a high-level REST API that accepts IO Modules or C code
+      that can be transformed into eBPF; southbound, it talks to the Linux
+      kernel to enable and connect IO Modules.  In addition, it provides some
+      helpers that allow IO Modules to handle points of eBPF programming that
+      are currently tricky.
+    </p>
+
+    <p>
+      There is a clear analogy between Open vSwitch/OpenFlow and IO
+      Modules/Hover.  In both cases, there is a kernel-based fast path, that
+      sometimes needs to consult a userspace-based slow path, which
+      occasionally needs to consult a controller over the network.  Open
+      vSwitch uses OpenFlow for communication with the controller; for Hover,
+      the protocol is yet to be determined.  Fulvio is considering whether to
+      use an existing controller such as ONOS.
+    </p>
+
+    <p>
+      Ben and Fulvio discuss how to divide the implementation between fast path
+      and slow path, with ARP as an example.
+    </p>
+
+    <p>
+      Fulvio briefly discusses the performance of IO Modules, which is
+      generally competitive with related technologies.  The goal, however, is
+      not performance, but flexibility.
+    </p>
+
+    <p>
+      In the future, Fulvio plans to dedicate resources to bringing IO Modules
+      into the larger IO Visor community.  Fulvio is also concerned that the IO
+      Visor community is tied too tightly to individual companies.  He hopes
+      for the community to expand further into university and research
+      environments.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Sun, 09 Jul 2017 18:27:21 GMT</pubDate>
+</item>

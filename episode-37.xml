@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>New Approach to OVN Datapath Performance</title>
+  <guests>Jun Xiao from CloudNetEngine</guests>
+  <description>
+    <p>
+      Jun Xiao is the founder and CTO of CloudNetEngine, which is focused on
+      innovating a next generation ``engine'' for cloud virtual networking.  He
+      has over 15 years experience in VMware, Huawei, Lucent, Sun Microsystem,
+      and other companies.  His system design experience ranges from low-level
+      device drivers and network stacks to middleware and distributed systems.
+    </p>
+
+    <p>
+      This episode is a talk that Jun gave at OpenStack Boston during the Open
+      vSwitch Open Source Day on May 10, with the following abstract:
+    </p>
+
+    <blockquote>
+      Jun presents a new high-performance datapath for OVN.  OVN has many
+      advantages than other virtual networking solutions given its great
+      architecture thus performant/extensible/scale, and it becomes the best
+      virtual networking solution if you want to use OVS with openstack.  In
+      this presentation, Jun will show how to deploy openstack/OVN with yet
+      another high performance OVS datapath, and deep dive on technical
+      solutions addressing OVS datapaths outstanding issues.  Jun will also
+      give a live demo for the integration and present some performance
+      benchmarks.
+    </blockquote>
+
+    <p>
+      Slides for this talk are available in <a
+      href="http://openvswitch.org/support/boston2017/1530-jun-xiao.ppt">PowerPoint</a>
+      and <a
+      href="http://openvswitch.org/support/boston2017/1530-jun-xiao.pdf">PDF</a>
+      formats.  The PowerPoint version may be preferable because it preserves
+      the animations.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Mon, 12 Jun 2017 05:26:12 GMT</pubDate>
+</item>

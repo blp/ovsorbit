@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>BigBug: Practical Concurrency Analysis for SDN</title>
+  <guests>Ahmed El-Hassany from ETH Zürich</guests>
+  <description>
+    <p>
+      Ahmed El-Hassany is a second-year Ph.D. student at ETH Zürich, who
+      researches ways to make networks more programmable and to verify the
+      correctness of programmable networks.  I caught up with Ahmed at <a
+      href="http://conferences.sigcomm.org/sosr/2017/program.html">SOSR</a>,
+      the Symposium on SDN Research, where he presented <a
+      href="https://sdnracer.ethz.ch/files/sosr17.pdf">BigBug: Practical
+      Concurrency Analysis for SDN</a>, a paper that he authored along with
+      Roman May, Laurent Vanbever, and Martin Vechev.  The paper's abstract is:
+    </p>
+
+    <blockquote>
+      <p>
+        By operating in highly asynchronous environments, SDN controllers often
+        suffer from bugs caused by concurrency violations.  Unfortunately,
+        state-of-the-art concurrency analyzers for SDNs often report thousands
+        of true violations, limiting their effectiveness in practice.
+      </p>
+
+      <p>
+        This paper presents BigBug, an approach for automatically identifying
+        the most representative concurrency violations: those that capture the
+        cause of the violation. The two key insights behind BigBug are that:
+        (i) many violations share the same root cause, and (ii) violations with
+        the same cause share common characteristics.  BigBug leverages these
+        observations to cluster reported violations according to the similarity
+        of events in them as well as SDN-specific features.  BigBug then
+        reports the most representative violation for each cluster using a
+        ranking function.
+      </p>
+
+      <p>
+        We implemented BigBug and showed its practical effectiveness. In more
+        than 100 experiments involving different controllers and applications,
+        BigBug systematically produced 6 clusters or less, corresponding to a
+        median decrease of 95% over state-of-the-art analyzers. The number of
+        violations reported by BigBug also closely matched that of actual bugs,
+        indicating that BigBug is effective at identifying root causes of SDN
+        races.
+      </p>
+    </blockquote>
+
+    <p>
+      For more information on BigBug, visit the <a
+      href="https://sdnracer.ethz.ch/">SDNRacer</a> website.  You can find
+      contact information for Ahmed on <a
+      href="http://people.ee.ethz.ch/~eahmed/">his webpage</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Tue, 01 Aug 2017 03:35:23 GMT</pubDate>
+</item>

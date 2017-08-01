@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>OVN Support for Multiple Gateways and IPv6</title>
+  <guests>Russell Bryant and Numan Siddique from Red Hat</guests>
+  <description>
+    <p>
+      Russell Bryant is a Senior Principal Software Engineer at Red Hat, Inc.
+      He was on the OpenStack Technical Committee from Fall 2012 until Fall
+      2016 and was elected to serve on the OpenStack Foundation Board of
+      Directors in 2015, 2016, and 2017.  Russell has been contributing to the
+      development of OpenStack since the Fall of 2011.  His most significant
+      contributions around OpenStack have been to Nova and most recently
+      Neutron and OVN.  Russell is also a project committer for Open vSwitch
+      (OVS) and OVN.
+    </p>
+
+    <p>
+      Numan Siddique is a developer at Red Hat, Bangalore.  He has around 12
+      years of software development experience.  He has been involved with
+      OpenStack since Ice house release.  He works mainly on OVN and
+      networking-ovn. Prior to OVN, he was contributing to OpenContrail SDN
+      controller.
+    </p>
+
+    <p>
+      This episode is a talk that Russell and Numan gave at OpenStack Boston
+      during the Open vSwitch Open Source Day on May 10, with the following
+      abstract:
+    </p>
+
+    <blockquote>
+      <p>
+        OVN supports multiple gateways on a network with traffic spread across
+        them.  Russell Bryant will cover the different gateway and NAT modes
+        supported by OVN and how OpenStack can take advantage of multiple
+        gateway support.
+      </p>
+
+      <p>
+        OVN supports IPv6.   Numan Siddique will cover the details of this
+        support, the present status of the IPv6 features supported and a list
+        of missing IPv6 features if any and a demo showing the supported IPv6
+        features by OVN.
+      </p>
+    </blockquote>
+
+    <p>
+      Slides for this talk are available in <a
+      href="http://openvswitch.org/support/boston2017/1150-ovn-gateways-ipv6.pdf">PDF</a>
+      format.  Some parts of the talk will be easier to follow while looking at
+      the slides.
+    </p>
+
+    <p>
+      Toward the end of the questions, Russell refers to the talk <a
+      href="https://www.openstack.org/videos/boston-2017/openstack-and-ovn-whats-new-with-ovs-2-7">OpenStack
+      and OVN: What's New with OVS 2.7</a>, given by Russell Bryant, Ben Pfaff,
+      and Justin Pettit at OpenStack Summit Boston.
+    </p>
+
+    <p>
+      Russell previously appeared in <a href="#e18">episode 18</a>, on the
+      launch of OVN, and <a href="#e7">episode 7</a> was based on a talk that
+      he co-presented.  Russell also made multiple presentations at <a
+      href="http://openvswitch.org/support/ovscon2015/">Open vSwitch 2015 Fall
+      Conference</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Sun, 11 Jun 2017 18:17:01 GMT</pubDate>
+</item>
