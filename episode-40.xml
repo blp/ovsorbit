@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>OpenStack Cyborg</title>
+  <guests>Howard (Zhipeng) Huang from Huawei</guests>
+  <description>
+    <p>
+      Howard is an IT standards engineer at Huawei.  He has been working on
+      open source for about 6 years and attended the early Open vSwitch
+      conferences, including the earliest one held at Cisco in 2014.  In this
+      episode of OVS Orbit, Howard talks about the OpenStack Cyborg project in
+      OpenStack, which was formerly called Nomad.  Howard is the ``caretaking''
+      PTL for the project.
+    </p>
+
+    <p>
+      The Cyborg project supports all kinds of hardware acceleration for
+      OpenStack.  It spans networking, storage, and other areas, primarily
+      because users tend to think of acceleration as a single bucket of
+      features.  Acceleration features across these multiple areas do require
+      common lifecycle management processes, supplied by Cyborg as as a common
+      management framework.
+    </p>
+
+    <p>
+      Open vSwitch relates to Cyborg on the network acceleration angle.  Howard
+      says that OVS can benefit from lifecycle management for hardware
+      acceleration, especially when the DPDK datapath is involved.  This could
+      allow users to ensure that OVS is always properly configured for the
+      local hardware.  Even in the absence of special acceleration hardware,
+      DPDK requires NIC- and CPU-specific configuration and tuning that amounts
+      to a kind of software acceleration, which Cyborg can help to manage.
+    </p>
+
+    <p>
+      Howard says that the project is planning an initial release for September
+      2017, in time for the OpenStack developer meeting.
+    </p>
+
+    <p>
+      The <a href="https://wiki.openstack.org/wiki/Cyborg">Cyborg website</a>
+      and <a
+      href="https://docs.google.com/presentation/d/1xXjqlMaXjXe7mn-iwoETGcTPnTbqCDfpaT6yqlZ8srE/edit#slide=id.p">master
+      slide deck</a> are good basic resources for learning about Cyborg.
+    </p>
+
+    <p>
+      You can contact or follow Howard on Twitter as <a
+      href="https://twitter.com/nopainkiller">@nopainkiller</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Sun, 20 Aug 2017 19:07:31 GMT</pubDate>
+</item>

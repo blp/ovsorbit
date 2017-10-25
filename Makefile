@@ -4,6 +4,7 @@ all:
 
 FILES = \
 	episode-*.mp3 \
+	abstract.html \
 	favicon.png \
 	feed-icon-*.png \
 	index.html \

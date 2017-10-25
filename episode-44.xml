@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Cocoon-2</title>
+  <guests>Leonid Ryzhyk from VMware Research</guests>
+  <description>
+    <p>
+      <a href="https://research.vmware.com/researchers/leonid-ryzhyk">Leonid
+      Ryzhyk</a> is a senior researcher at VMware Research in Palo Alto.  He
+      focuses on applying formal methods to improve operating systems and
+      networks.
+    </p>
+
+    <p>
+      This episodes discusses <a
+      href="https://github.com/ryzhyk/cocoon2">Cocoon-2</a>, a system that
+      Leonid is building to automate the tedious tasks involved in SDN
+      programming.  One problem that it aims to solve is incrementality, that
+      is, the need to avoid recomputing all of the state in an SDN system given
+      a small change to its configuration.
+    </p>
+    
+    <p>
+      Numerous academic SDN programming languages exist.  Many of these think
+      of the network in terms of an automaton.  <a
+      href="http://network-programming.org/">NetKAT</a> is a good example,
+      which regards the network as a finite state machine that manipulates
+      network packets.  Other languages take a contrary view of the network as
+      a collection of database tables and compute state via views and queries
+      on these tables.  Cocoon's innovation is that it takes both views: it
+      supports a relational model with a Datalog engine for reasoning about
+      computation and an imperative language for describing the data plane, and
+      allows the programmer to decide the most appropriate tool for any given
+      part of the implementation.
+    </p>
+
+    <p>
+      A publication for Cocoon-2 is planned for submission to SIGCOMM 2018.
+      Until then, you can look at the <a
+      href="https://github.com/ryzhyk/cocoon2">Cocoon2 Github repository</a>,
+      including a <a
+      href="https://github.com/ryzhyk/cocoon2/blob/master/examples/virt/virt.ccn">simple
+      example</a>.  For information on the prior Cocoon work, consult the <a
+      href="https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/ryzhyk">NSDI
+      2017</a> paper.
+    </p>
+
+    <p>
+      For more information on the view of a network as a database, you might
+      listen to <a href="https://ovsorbit.org/#e5">Episode 5</a>, about the
+      nlog database language.
+    </p>
+
+    <p>
+      You can contact Leonid via email at <a
+      href="mailto:lryzhyk@vmware.com">lryzhyk@vmware.com</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Tue, 24 Oct 2017 02:18:39 GMT</pubDate>
+</item>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Fuzzing Frameworks</title>
+  <guests>Bhargava Shastry from TU Berlin</guests>
+  <description>
+    <p>
+      <a
+      href="http://www.isti.tu-berlin.de/security_in_telecommunications/menue/team/research_assistants/bhargava_shastry">Bhargava
+      Shastry</a> is a Ph.D. student in the <a
+      href="http://www.isti.tu-berlin.de/security_in_telecommunications/menue/overview/">Chair
+      for Security in Telecommunications</a> at <a
+      href="http://www.tu-berlin.de/menue/home/">Technical University
+      Berlin</a>.  Bhargava develops tools that enable early detection and
+      fixing of security vulnerabilities.
+    </p>
+
+    <p>
+      Among other topics, this episode discusses Bhargava's paper ``<a
+      href="https://www.usenix.org/conference/woot17/workshop-program/presentation/shastry">Static
+      Exploration of Taint-Style Vulnerabilities Found by Fuzzing</a>,'' which
+      was presented at <a href="https://www.usenix.org/conference/woot17">WOOT
+      '17</a>, the Workshop on Offensive Technologies.  The paper's abstract
+      is:
+    </p>
+
+    <blockquote>
+      <p>
+        Taint-style vulnerabilities comprise a majority of fuzzer discovered
+        program faults. These vulnerabilities usually manifest as memory access
+        violations caused by tainted program input. Although fuzzers have
+        helped uncover a majority of taint-style vulnerabilities in software to
+        date, they are limited by (i) extent of test coverage; and (ii) the
+        availability of fuzzable test cases. Therefore, fuzzing alone cannot
+        provide a high assurance that all taint-style vulnerabilities have been
+        uncovered.
+      </p>
+
+      <p>
+        In this paper, we use static template matching to find recurrences of
+        fuzzer-discovered vulnerabilities. To compensate for the inherent
+        incompleteness of template matching, we implement a simple yet
+        effective match-ranking algorithm that uses test coverage data to focus
+        attention on matches comprising untested code. We prototype our
+        approach using the Clang/LLVM compiler toolchain and use it in
+        conjunction with afl-fuzz, a modern coverage-guided fuzzer. Using a
+        case study carried out on the Open vSwitch codebase, we show that our
+        prototype uncovers corner cases in modules that lack a fuzzable test
+        harness. Our work demonstrates that static analysis can effectively
+        complement fuzz testing, and is a useful addition to the security
+        assessment tool-set. Furthermore, our techniques hold promise for
+        increasing the effectiveness of program analysis and testing, and serve
+        as a building block for a hybrid vulnerability discovery framework.
+      </p>
+    </blockquote>
+
+    <p>
+      You can tweet to Bhargava as <a
+      href="https://twitter.com/ibags">@ibags</a> or to the Security in
+      Telecommunications Research Group at <a
+      href="https://twitter.com/fgsect">@fgsect</a>.  Visit <a
+      href="http://www.isti.tu-berlin.de/security_in_telecommunications/menue/team/research_assistants/bhargava_shastry">Bhargava's
+      TU Berlin home page</a> for more contact information.
+    </p>
+
+    <p>
+      <a href="#e42">Episode 42</a> covered a different research effort fuzzing
+      Open vSwitch.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Tue, 03 Oct 2017 05:08:03 GMT</pubDate>
+</item>
