@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Open Compute Project Networking</title>
+  <guests>Andrew "Puck" Ruthven from Catalyst IT</guests>
+  <description>
+    <p>
+      Andrew Ruthven, aka ``Puck'', is a Data Centre Manager at <a
+      href="https://www.catalyst.net.nz/">Catalyst IT</a>, a New Zealand open
+      source specialist IT company whose services include operating an
+      OpenStack based public cloud.
+    </p>
+
+    <p>
+      This episode is based on <a
+      href="https://www.openstack.org/summit/sydney-2017/summit-schedule/events/20417/open-compute-project-down-under">``Open
+      Compute Project, down under''</a>, a talk that Andrew gave at OpenStack
+      Sydney, which had the following abstract:
+    </p>
+
+    <blockquote>
+      This talk will review the Open Compute Project, where it came from, where
+      things are now and where things are headed. We will cover benefits that
+      Open Compute Project hardware provide over the typical server hardware
+      that we’re used to. We will discuss how it works for the large scale
+      operators, and the issues that affect the small scale operators from the
+      perspective of a small scale operator.
+    </blockquote>
+
+    <p>
+      The discussion begins with an introduction to the Open Compute Project
+      (OCP) and its history and motivations.  Andrew covers challenges in
+      bringing the Open Compute Project to New Zealand, which included setting
+      up supply and support chains for the hardware.  More relevant to our
+      podcast focus, in addition to servers, OCP includes hardware for ``white
+      box'' switches and access points, and Andrew talks about how those work
+      and how they fit into a data center infrastructure.  Andrew also talks
+      about the future of OCP and SDN at Catalyst and in New Zealand.
+    </p>
+
+    <p>
+      Toward the end, we digress into a side discussion of how, on the
+      commercial side of the industry, hardware is becoming more and more open,
+      with OCP as an example, whereas on the consumer side, hardware is
+      becoming more and more locked down, and Andrew and Ben offer their
+      thoughts on the situation.
+    </p>
+
+    <p>
+      You can find Andrew on Twitter as <a
+      href="https://twitter.com/puck_">@puck_</a>.  To find out more about Open
+      Compute Project, visit the <a href="http://www.opencompute.org/">project
+      website</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Thu, 11 Jan 2018 11:18:17 GMT</pubDate>
+</item>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Hardware Acceleration on NICs</title>
+  <guests>Andy Gospodarek from Broadcom</guests>
+  <description>
+    <p>
+      This episode features Andy Gospodarek, a Principal Engineer at Broadcom,
+      where he works as a software architect on the NICs team.  This interview,
+      recorded at the DPDK summit in San Jose on November 15, 2017, focuses on
+      his team's work on offloading flows to Broadcom NICs, using the user's
+      choice of the Linux ``TC'' flow offload API or a Broadcom-specific API.
+      Toward the end, he also talks about a different kind of hardware
+      acceleration using a ``Smart NIC'' with a multicore general-purpose CPU
+      that can run Open vSwitch or other popular networking software.
+    </p>
+    
+    <p>
+      Andy also spoke about acceleration with Smart NICs at <a
+      href="http://openvswitch.org/support/ovscon2017/">Open vSwitch Fall
+      Conference 2018</a>.  <a
+      href="https://www.slideshare.net/LF_OpenvSwitch/lfovs17the-birth-of-smartnics-offloading-dataplane-traffic-tosoftware">Slides</a>
+      and <a
+      href="https://www.youtube.com/watch?v=AGSy51VlKaM&amp;index=32&amp;list=PLaJlRa-xItwD7ikTsrZOhju5xbE-QP9U1">video</a>
+      are available.
+    </p>
+
+    <p>
+      You can contact Andy as <a href="https://twitter.com/gospo">@gospo</a> on
+      Twitter.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Wed, 31 Jan 2018 04:09:38 GMT</pubDate>
+</item>

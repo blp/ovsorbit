@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Faucet and OpenFlow at Allied Telesis</title>
+  <guests>Tony Van der Peet</guests>
+  <description>
+    <p>
+      Tony van der Peet is Chief Architect at Allied Telesis.  In this episode,
+      he speaks about using OpenFlow on Allied Telesis networking hardware for
+      enterprise SDN.
+    </p>
+
+    <p>
+      The Allied Telesis implementation of OpenFlow is based on Open vSwitch.
+      According to Tony:
+    </p>
+
+    <blockquote>
+    ``We've tried really from the word `go' to develop the
+      most generic OpenFlow switch that we can, and obviously Open vSwitch is a
+      very fully featured version of OpenFlow.  The trick, then, is how to
+      integrate that with your hardware solution.  The solution we've come up
+      with is to let Open vSwitch do what it does best, which is to manage the
+      tables, and to work out what needs to happen to a particular flow, and
+      for us to then take that and to translate it as best we can into our
+      hardware tables.''
+    </blockquote>
+
+    <p>
+      Most Open vSwitch downstream projects use an official Open vSwitch
+      release as their base, but Allied Telesis uses the tip of master:
+    </p>
+
+    <blockquote>
+      ``I discovered a long time ago that all the good stuff was on master, so
+      we had a policy very early on of going to the tip of master at the time
+      we felt it was right to do an upgrade from upstream.  Sometimes that
+      means we take a bit of rough with the smooth, but we're prepared for
+      that.''
+    </blockquote>
+
+    <p>
+      Allied Telesis has a policy of staying close to upstream and pushing back
+      changes:
+    </p>
+
+    <blockquote>
+      ``We do have an active policy of pushing patches upstream on any of the
+      projects we're associated with.  We have done a couple of patches back up
+      to Open vSwitch and we do have a bunch more, and I've already discussed
+      with you the idea that we might push up some of our patches we've done
+      recently to give us conformance to the ONF official conformance
+      program.''
+    </blockquote>
+
+    <p>
+      Tony describes Allied Telesis's experience of the ONF conformance testing
+      process.  They began by writing their own versions of all 300+ tests that
+      the process includes.  Writing the tests took about 1 hour per test, on
+      average, so this was a significant investment in time.  The investment
+      paid off because it gave Tony and Allied Telesis experience with the
+      tests and enough information to intelligently argue with the conformance
+      lab.
+    </p>
+
+    <p>
+      Tony became involved with Faucet because of the New Zealand connection:
+      both Tony and Faucet are based there.  Allied Telesis appreciates how
+      Faucet as an open source project allows a way to show an OpenFlow use
+      case for its switches.
+    </p>
+
+    <p>
+      Allied Telesis is also involved with OpenDaylight and other controllers.
+    </p>
+
+    <p>
+      Allied Telesis will likely join the nascent <a
+      href="http://conference.faucet.nz/slides/Chris%20Lorier%20-%20FAUCET%20Architecture.pptx">Faucet
+      Foundation</a>.
+    </p>
+
+    <p>
+      For more information about OpenFlow at Allied Telesis, visit the <a
+      href="https://www.alliedtelesis.com/">Allied Telesis website</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Tue, 31 Oct 2017 03:24:41 GMT</pubDate>
+</item>

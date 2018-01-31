@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Routing a Production Enterprise Network with Faucet</title>
+  <guests>Brad Cowie from WAND</guests>
+  <description>
+    <p>
+      <a href="https://wand.nz/~brad/">Brad Cowie</a> is a member of the <a
+      href="https://wand.net.nz/">WAND Network Research Group</a> at the <a
+      href="https://www.waikato.ac.nz/">University of Waikato</a>, in Hamilton,
+      New Zealand.  He is also a core member of the Faucet project which
+      develops an open source OpenFlow controller for enterprise networks,
+      which he uses to build production OpenFlow networks.
+    </p>
+
+    <p>
+      This episode is a recording of a <a
+      href="https://www.openstack.org/summit/sydney-2017/summit-schedule/events/20415/providing-routing-on-a-production-enterprise-network-with-faucet-and-openvswitch">talk</a>
+      that Brad gave at the <a
+      href="https://www.openstack.org/summit/sydney-2017/">OpenStack Summit in
+      Sydney</a> on Nov. 6, with the following abstract:
+    </p>
+
+    <blockquote>
+      Within the WAND network research group at the University of Waikato, we
+      operate a 100% OpenFlow-controlled network for research/teaching/BYOD
+      traffic.  The access/aggregation layer of this network is provided by
+      vendor OpenFlow switches (most running embedded OpenvSwitch with ASIC SDK
+      drivers to drive merchant silicon).  The core routing for the network is
+      provided by a linux server running a high-speed userspace OpenvSwitch
+      bridge accelerated by DPDK.  The entire network is controlled by our open
+      source OpenFlow v1.3 controller, Faucet.  We also introduce our
+      test-driven methodology for implementing network features in Faucet and
+      how this can also be applied to operating a network.
+    </blockquote>
+
+    <p>
+      You may want to view the <a
+      href="https://wand.nz/~brad/talks/openstack_summit_sydney2017_faucet.pdf">slides</a>
+      that accompany the talk.
+    </p>
+
+    <p>
+      For more information on Faucet, visit the <a
+      href="http://faucet.nz/">Faucet website</a>.  You can reach Brad as
+      <code>gizmoguy</code> on IRC or <a
+      href="https://twitter.com/nzgizmoguy">@nzgizmoguy</a> on Twitter.
+    </p>
+
+    <p>
+      OVS Orbit has previously covered Faucet in <a href="#e45">Episode 45:
+      Faucet and OpenFlow at Allied Telesis</a>, <a href="#e33">Epsiode 33:
+      Lightning Talks</a>, and <a href="#e19">Episode 19: The Faucet SDN
+      Controller</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Thu, 30 Nov 2017 21:26:10 GMT</pubDate>
+</item>
