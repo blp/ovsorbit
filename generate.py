@@ -25,7 +25,7 @@ def get_elem(parent, name):
 
 rss_skel = parse_file('rss-skel.xml')
 episodes = []
-for i in range(1, 51):
+for i in range(1, 53):
     e = parse_file('episode-%d.xml' % i)
     size = os.stat('episode-%d.mp3' % i).st_size
     runtime = int(subprocess.check_output(['mp3info', '-p', '%S', 'episode-%d.mp3' % i]))
@@ -152,7 +152,7 @@ for d in reversed(episodes):
 
     s = '<div data-role="page" id="e%d"><h3>Episode %d: %s%s (%s)</h3>\n' % (i, i, title, guests, fulldate)
     for elem in get_elem(e.documentElement, 'description').childNodes:
-        s += elem.toxml()
+        s += elem.toxml().replace("`", "'")
     s += '<p><a href="%s"><button>Listen to MP3 %s.</button></a></p></div>' % (mp3file, mp3info)
     details += s
 
