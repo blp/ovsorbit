@@ -15,7 +15,9 @@ FILES = \
 	style.css \
 	count-popularity \
 	update-stars \
-	episode-22-slides.pdf
+	episode-22-slides.pdf \
+	episode-58-slides.pdf \
+	success-and-failure.pdf
 SRV = /srv/ovsorbit.benpfaff.org
 install: all
 	rsync -P $(FILES) benpfaff.org:'$(SRV)'

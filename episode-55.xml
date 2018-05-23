@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Introduction to OVSDB</title>
+  <description>
+    <p>
+      This is the second in a series of Open vSwitch tech talks that we are
+      starting to run internally at VMware every week or two.  This episode is
+      particularly about OVSDB, the Open vSwitch Database.  It starts out with
+      material explaining why OVSDB exists at all, given that there is so much
+      other work in databases and in network configuration.  Then it moves on
+      to what OVSDB is and its basic features, including the features that its
+      schemas support.  It also discusses the basics of the OVSDB network
+      protocol.  It concludes with several minutes of questions.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Sat, 07 Apr 2018 21:22:32 GMT</pubDate>
+</item>
