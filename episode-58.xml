@@ -19,7 +19,7 @@
       existing implementation, any change in the northbound database causes
       <code>ovn-northd</code> to do a full recomputation of the complete
       contents of the southbound database.  For a large network, this is
-      slow&mdash;it can take multiple seconds of CPU time&mdash;regardless of
+      slow&#8212;it can take multiple seconds of CPU time&#8212;regardless of
       the size of the change in the northbound database.  Therefore, even a
       small change, such as adding or removing a single port or a single VM,
       can take a relatively long time to be realized in the network.
@@ -51,7 +51,7 @@
 
     <p>
       Leonid previously appeared in OVS Orbit in <a href="#e44">episode 44</a>
-      on the Cocoon-2 network programming system.  <a href="#e5>Episode 5</a>,
+      on the Cocoon-2 network programming system.  <a href="#e5">Episode 5</a>,
       with Teemu Koponen and Yusheng Wang, touched on related concepts with its
       coverage of the nlog language which is also based on Datalog.
     </p>
