@@ -1,0 +1,9 @@
+OVS Orbit is edited and produced by Ben Pfaff using Audacity audio
+editing software and released under the Creative Commons Unported 3.0
+license.  The intro and bumper music in this episode is excerpted from
+Electro Deluxe by My Free Mickey, and the outro from Girls Like You by
+Stefan Kartenberg, both under the Creative Commons Attribution Unported
+3.0 license.
+
+For more episodes of OVS Orbit, visit ovsorbit.org, or for more
+information about Open vSwitch, visit openvswitch.org.
