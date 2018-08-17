@@ -56,7 +56,7 @@ Instructions
     cases.  Whatever.
 
  7. Starting from the beginning of the audio, listen to the entire
-    episode.  You have two jobs, described below:
+    episode.  You have three jobs, described below:
 
     (a) Delete audio that shouldn't appear in the final episode.  Audio
 	to delete includes the following:
@@ -100,6 +100,19 @@ Instructions
 	region of audio in which the mic should really be silent, then
 	push Control+L.  For some recordings, this makes a big
 	difference in quality, although it can be time consuming.
+
+    (c) Write up an episode description.  Start by making a copy of
+        fragments/episode-skeleton.xml.  Then, edit it to describe the person
+        speaking or being interviewed, what the episode is about, how to
+        contact the interviewee, and adding pointers to related episodes (if
+        any).  Make sure to credit yourself in the attribution block at the
+        end.
+
+        The episode description eventually gets copied directly into the RSS.
+        It should only use simple HTML.  Some podcatchers don't render HTML at
+        all and just delete all the tags, and some only show paragraph breaks
+        if there's a blank line in the input, so make sure there's a blank line
+        between </p> and <p> and between </li> and <li>.
 
  8. Level the volume within each individual track.  Sometimes the
     volume in a given track is pretty constant, if the speaker has
