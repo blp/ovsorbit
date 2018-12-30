@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Oko: Extending Open vSwitch with Stateful Filters</title>
+  <guests>Paul Chaignon from Orange Labs and Inria Nancy</guests>
+  <description>
+    <p>
+      Paul Chaignon is a grad student at Orange and Inria.  In this episode,
+      Paul talks about <a
+      href="https://dl.acm.org/citation.cfm?id=3185496">Oko: Extending Open
+      vSwitch with Stateful Filters</a>, a paper written with co-authors Kahina
+      Lazri, Jérôme François, Thibault Delmas, and Olivier Festor.  Paul
+      presented this research at <a
+      href="https://conferences.sigcomm.org/sosr/2018/">SOSR '18</a> in March
+      2018.  The paper has the following abstract:
+    </p>
+
+    <blockquote>
+      <p>
+        With the Software-Defined Networking paradigm, software switches
+        emerged as the new edge of datacenter networks. The widely adopted Open
+        vSwitch implements the OpenFlow forwarding model; its simple
+        match-action abstraction eases network management, while providing
+        enough flexibility to define complex forwarding pipelines. OpenFlow,
+        however, cannot express the many packets processing algorithms required
+        for traffic measurement, network security, or congestion diagnosis, as
+        it lacks a persistent state and basic arithmetic and logic operations.
+      </p>
+
+      <p>
+        This paper presents Oko, an extension of Open vSwitch that enables
+        runtime integration of stateful filtering and monitoring
+        functionalities based on Berkeley Packet Filter (BPF) programs into the
+        OpenFlow pipeline. BPF programs attached to OpenFlow rules act as
+        intelligent filters over packets, while leaving the packets
+        unmodified. This approach enables the transparent extension of Open
+        vSwitch's flow caching architecture, retaining its high-performance
+        benefits. Furthermore, the use of BPF allows for safe runtime extension
+        and prevention of switch failures due to faulty programs.
+      </p>
+
+      <p>
+        We compare our implementation based on Open vSwitch-DPDK to existing
+        approaches with comparable isolation properties and measure a near 2x
+        improvement of performance.
+      </p>
+    </blockquote>
+
+    <p>
+      You can contact Paul on Twitter as <a
+      href="https://twitter.com/pchaigno">@pchaigno</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Fri, 17 Aug 2018 18:37:31 GMT</pubDate>
+</item>

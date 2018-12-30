@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Personalized Pseudonyms for Servers in the Cloud</title>
+  <guests>Qiuyu Xiao from UNC-Chapel Hill</guests>
+  <description>
+    <p>
+      Qiuyu Xiao is a PhD student studying computer science at the University
+      of North Carolina at Chapel Hill.  This episode is a talk that Qiuyu gave
+      at VMware in May.  It is based on the paper ``Personalized Pseudonyms for
+      Servers in the Cloud,'' by Qiuyu Xiao, Michael K. Reiter, and Yinqian
+      Zhangyinqian, originally published in 2017 at <cite>Proceedings on
+      Privacy Enhancing Technologies</cite>.
+    </p>
+
+    <p>
+      You may wish to follow along with Qiuyu's <a
+      href="episode-63-slides.pdf">slides</a>.
+    </p>
+
+    <p>
+      The paper's abstract is:
+    </p>
+
+    <blockquote>
+      A considerable and growing fraction of servers, especially of web
+      servers, is hosted in compute clouds. In this paper we opportunistically
+      leverage this trend to improve privacy of clients from network attackers
+      residing between the clients and the cloud: We design a system that can
+      be deployed by the cloud operator to prevent a network adversary from
+      determining which of the cloud’s tenant servers a client is
+      accessing. The core innovation in our design is a PoPSiCl (pronounced
+      ``popsicle''), a persistent pseudonym for a tenant server that can be used
+      by a single client to access the server, whose real identity is protected
+      by the cloud from both passive and active network attackers. When
+      instantiated for TLS-based access to web servers, our design works with
+      all major browsers and requires no additional client-side software and
+      minimal changes to the client user experience. Moreover, changes to
+      tenant servers can be hidden in supporting software (operating systems
+      and web-programming frameworks) without imposing on web-content
+      development. Perhaps most notably, our system boosts privacy with minimal
+      impact to web-browsing performance, after some initial setup during a
+      user’s first access to each web server.
+    </blockquote>
+
+    <p>
+      You can reach Qiuyu at <a
+      href="mailto:qiuyu@cs.unc.edu">qiuyu@cs.unc.edu</a> or on Twitter as <a
+      href="https://twitter.com/QiuyuX">@QiuyuX</a>.
+    </p>
+
+    <p>
+      Related episodes.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a
+      href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a
+      href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Wed, 29 Aug 2018 14:01:03 GMT</pubDate>
+</item>

@@ -1,0 +1,90 @@
+[
+  "Open_vSwitch",
+  {
+    "columns": [
+      "bridges"],
+    "op": "wait",
+    "rows": [
+      {
+        "bridges": [
+          "set",
+          []]}],
+    "table": "Open_vSwitch",
+    "timeout": 0,
+    "until": "==",
+    "where": [
+      [
+        "_uuid",
+        "==",
+        [
+          "uuid",
+          "facb61aa-38d7-440b-be57-0ebf3e9f0e3e"]]]},
+  {
+    "op": "insert",
+    "row": {
+      "name": "br0",
+      "ports": [
+        "named-uuid",
+        "rowea770c26_ad37_41e0_a3de_e3128a64217b"]},
+    "table": "Bridge",
+    "uuid-name": "row2bfda4dd_3740_45a3_b864_fd1fcb0dbe72"},
+  {
+    "op": "insert",
+    "row": {
+      "interfaces": [
+        "named-uuid",
+        "row430acade_77a7_499b_bf37_1b7247277c17"],
+      "name": "br0"},
+    "table": "Port",
+    "uuid-name": "rowea770c26_ad37_41e0_a3de_e3128a64217b"},
+  {
+    "op": "update",
+    "row": {
+      "bridges": [
+        "named-uuid",
+        "row2bfda4dd_3740_45a3_b864_fd1fcb0dbe72"]},
+    "table": "Open_vSwitch",
+    "where": [
+      [
+        "_uuid",
+        "==",
+        [
+          "uuid",
+          "facb61aa-38d7-440b-be57-0ebf3e9f0e3e"]]]},
+  {
+    "op": "insert",
+    "row": {
+      "name": "br0",
+      "type": "internal"},
+    "table": "Interface",
+    "uuid-name": "row430acade_77a7_499b_bf37_1b7247277c17"},
+  {
+    "mutations": [
+      [
+        "next_cfg",
+        "+=",
+        1]],
+    "op": "mutate",
+    "table": "Open_vSwitch",
+    "where": [
+      [
+        "_uuid",
+        "==",
+        [
+          "uuid",
+          "facb61aa-38d7-440b-be57-0ebf3e9f0e3e"]]]},
+  {
+    "columns": [
+      "next_cfg"],
+    "op": "select",
+    "table": "Open_vSwitch",
+    "where": [
+      [
+        "_uuid",
+        "==",
+        [
+          "uuid",
+          "facb61aa-38d7-440b-be57-0ebf3e9f0e3e"]]]},
+  {
+    "comment": "ovs-vsctl (invoked by /bin/bash): ovs-vsctl -vjsonrpc add-br br0",
+    "op": "comment"}]

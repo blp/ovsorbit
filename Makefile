@@ -14,7 +14,8 @@ FILES = \
 	orbit_*.png \
 	style.css \
 	episode-*-slides.pdf \
-	success-and-failure.pdf
+	success-and-failure.pdf \
+	ovsdb2*.txt
 SRV = /srv/ovsorbit.benpfaff.org
 install: all
 	rsync -P $(FILES) benpfaff.org:'$(SRV)'

@@ -25,6 +25,8 @@ The left side of the track UI has a relative volume slider that goes
 from -25 dB to +36 dB.  It also has Mute and Solo buttons that are
 useful for listening to just some of the audio tracks.
 
+Audacity has really good undo/redo with Control+Z and Control+Shift+Z.
+
 
 Instructions
 ------------
