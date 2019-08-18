@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>The Faucet Controller at SC18</title>
+  <guests>Brad Cowie and Richard Sanger from University of Waikato</guests>
+  <description>
+    <p>
+      Brad Cowie and Richard Sanger are members of the <a href="https://wand.net.nz/">WAND Network Research Group</a> at the <a href="https://www.waikato.ac.nz/">University of Waikato</a>, in Hamilton,
+      New Zealand.  They are both associated with the <a href="https://faucet.nz/">Faucet</a> project, which develops an open
+      source OpenFlow controller for enterprise networks.
+    </p>
+
+    <p>
+      The first part of this talk is an introduction to Faucet.  The second
+      part talks about how Faucet became involved in <a href="https://sc18.supercomputing.org/experience/scinet/">SCinet</a> at
+      <a href="https://sc18.supercomputing.org/">SC18</a>, the supercomputing
+      conference held annually in Dallas.  The talk includes questions from the
+      audience.
+    </p>
+
+    <p>
+      You may wish to view <a href="episode-68-slides.pdf">Brad's slides</a>
+      along with the episode.
+    </p>
+
+    <p>
+      For more information on Faucet, visit the <a href="http://faucet.nz/">Faucet website</a>.  You can reach Brad as
+      <code>gizmoguy</code> on IRC or <a href="https://twitter.com/nzgizmoguy">@nzgizmoguy</a> on Twitter.
+    </p>
+
+    <p>
+      Brad Cowie previously spoke with OVS Orbit in <a href="https://ovsorbit.org/#e47">Episode 47: Routing a Production
+      Enterprise Network with Faucet</a>.  OVS Orbit previously covered Faucet
+      in <a href="#e45">Episode 45: Faucet and OpenFlow at Allied Telesis</a>,
+      <a href="#e33">Epsiode 33: Lightning Talks</a>, and <a href="#e19">Episode 19: The Faucet SDN Controller</a>.
+    </p>
+
+    <p>
+      For another take on Faucet at SC18, you can listen to Ivan Pepelnjak
+      interview Nick Buraglio in <a href="https://blog.ipspace.net/2019/04/using-faucet-to-build-sc18-network-with.html">Episode
+      101 of Software Gone Wild</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Wed, 01 May 2019 12:00:00 GMT</pubDate>
+</item>

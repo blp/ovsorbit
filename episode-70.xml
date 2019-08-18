@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>Long-Term Network Latency</title>
+  <guests>Nick Buraglio from ESnet</guests>
+  <description>
+    <p>
+      Nick Buraglio works in research and education and service provider
+      networking, currently at <a href="https://es.net">ESnet</a>, the US
+      Department of Energy's science network, which links <a href="https://es.net/about/">sites in the United States and western
+      Europe</a>.  In this podcast, he talks about the role of latency
+      monitoring in managing a network.
+    </p>
+
+    <p>
+      Nick defines the latency that he's talking about:
+    </p>
+
+    <blockquote>
+      &quot;When most people think of latency, they think of a ping round-trip time.
+      That's one useful data point, but we're talking about very low tolerance
+      and high accuracy latency.  You have to have a cellular or GPS clock and
+      a very strong clock source in the system to be able to track it at this
+      level.  We use that as a very important part of how we manage our
+      network.  That's really what I'm talking about when I talk about
+      latency.&quot;
+    </blockquote>
+
+    <p>
+      Nick discusses the <a href="http://docs.perfsonar.net/">perfSONAR</a>
+      software for monitoring latency over time and for investigating problems
+      as they occur.
+    </p>
+
+    <p>
+      Some basic live monitoring charts and graphs for ESnet are online at <a href="https://my.es.net/">MyESnet</a>.
+    </p>
+
+    <p>
+      You can contact Nick on Twitter as <a href="https://twitter.com/forwardingplane">@forwardingplane</a> or visit
+      his blog at <a href="https://www.forwardingplane.net/">forwardingplane.net</a>.
+    </p>
+
+    <p>
+      Other episodes of OVS Orbit related to monitoring include <a href="#e46">Episode 46: In-band Network Telemetry</a> and <a href="#e6">Episode 6: sFlow</a>.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Thu, 25 Jul 2019 12:00:00 GMT</pubDate>
+</item>

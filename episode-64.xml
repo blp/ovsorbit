@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <title>Introduction to OVSDB, Part 2</title>
-  <guests>Person from Organization</guests>
   <description>
     <p>
       This episode, recorded in April 2018, was the third in a series of
@@ -31,7 +30,7 @@
     </p>
     
     <p>
-      Part 1, in <a href="#e55">episode 55</a> covered OVSDB from the server
+      Part 1, in <a href="#e55">episode 55</a>, covered OVSDB from the server
       and network protocol point of view.
     </p>
 

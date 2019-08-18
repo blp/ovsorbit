@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>The Discrepancy of the Megaflow Cache in OVS</title>
+  <guests>Levente Csikor and Gabor Retvari from Budapest University of Technology and Economics</guests>
+  <description>
+    <p>
+      Levente Csikor and Gabor Retvari from the Budapest University of
+      Technology and Economics present their talk “The Discrepancy of the
+      Megaflow Cache in OVS” at the Open vSwitch Fall Conference in San Jose
+      in December 2018.  A few days later, they visited me to have this
+      discussion for the podcast about their work.  This episode is a discussion of their work and their results.
+    </p>
+
+    <p>
+      For a synopsis of Levente and Gabor's work, please visit <a href="https://ovsfall2018.sched.com/event/IO8b/the-discrepancy-of-the-megaflow-cache-in-ovs">the
+      OVS conference page</a>.  <a href="http://www.openvswitch.org/support/ovscon2018/6/1005-csikor.pptx">Slides</a>
+      and <a href="https://www.youtube.com/watch?v=dXC5X--pPOA&amp;t=0s&amp;list=PLaJlRa-xItwCzuAL3mP6n02vmXab4Bwu-&amp;index=23">video</a>
+      of their ovscon talk are also available.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Mon, 01 Apr 2019 19:07:53 GMT</pubDate>
+</item>

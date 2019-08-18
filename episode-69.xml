@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <title>User-Configurable Protocol Support for OVS, or Why Doesn't OVS Support P4?</title>
+  <description>
+    <p>
+      There are several challenges toward making it easy for users to add
+      support for new protocols in OVS or, equivalently, adding P4 support to
+      OVS.  This talk, given at the Dagstuhl seminar on programmable data
+      planes in April 2019, explains the reasons that OVS doesn't already have
+      these features, what's changing, and likely future directions.  The talk
+      includes considerable discussion with the audience.
+    </p>
+
+    <p>
+      An early statement summarizes the message of the talk:
+    </p>
+
+    <blockquote>
+      ...I think that it's too hard to add support for new protocols and I
+      think users should be able to do that fairly easily.  Currently, it's
+      really hard--it's hard for me in some cases, and if it's hard for me then
+      I'm sure it's hard for everyone else.
+    </blockquote>
+
+    <p>
+      A little later, this quote covers Ben's philosophy on P4:
+    </p>
+
+    <blockquote>
+      Why I like P4 is because of my own personal experience with OpenFlow.  At
+      Nicira when we started out designing OpenFlow, we designed it for very
+      much a fixed match over basically IPv4 and related fields.  We knew from
+      day 1 that that wasn't good enough, I mean, not to mention existing
+      protocols like IPv6 that we couldn't handle, but it seemed pretty obvious
+      that people would want to add their own.  Over a couple of years, in my
+      spare time I started tinkering with ideas for how to write a language for
+      specifying what protocols a switch supports. It seemed like there were
+      two possibilities that kept coming up, and yet neither one of them seemed
+      very good.  One was basically based on fixed offsets; people kept
+      suggesting this, I think maybe even Nick McKeown suggested this at one
+      point.  I kept pointing out that fixed offsets are not going to work very
+      well because offsets change from one packet to another.  The other end of
+      the spectrum was somebody just provides a program in some general-purpose
+      language that extracts the headers that you want, and that also seems
+      pretty unsatisfying because it's really hard to take a general-purpose
+      program and look at it in terms of some of its emergent properties.  You
+      can't do much with it other than run it.  I tried to come up with some
+      languages that fit in between and then when I first saw one of the drafts
+      of the P4 specification, I looked at it and said, &quot;I wish I'd written
+      this.&quot;  It seems to me that it strikes a really good balance there.
+    </blockquote>
+
+    <p>
+      The remainder of the talk covers the possible directions forward for OVS
+      and flexible protocol support, including eBPF and AF_XDP.
+    </p>
+
+    <p class="attribution">
+      OVS Orbit is produced by <a href="mailto:blp@ovn.org">Ben Pfaff</a>.  The
+      intro music in this episode is <a href="http://dig.ccmixter.org/files/AlexBeroza/43098">Drive</a>,
+      featuring cdk and DarrylJ, copyright 2013, 2016 by Alex.  The bumper
+      music is <a href="http://dig.ccmixter.org/files/speck/42100">Yeah Ant</a>
+      featuring Wired Ant and Javolenus, copyright 2013 by Speck.  The outro
+      music is <a href="http://dig.ccmixter.org/files/Kirkoid/43005">Space
+      Bazooka</a> featuring Doxen Zsigmond, copyright 2013 by Kirkoid.  All
+      content is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0
+      Unported (CC BY 3.0)</a> license.
+    </p>
+  </description>
+  <pubDate>Mon, 03 Jun 2019 12:00:00 GMT</pubDate>
+</item>

@@ -25,7 +25,7 @@ def get_elem(parent, name):
 
 rss_skel = parse_file('rss-skel.xml')
 episodes = []
-for i in range(1, 65):
+for i in range(1, 71):
     e = parse_file('episode-%d.xml' % i)
     size = os.stat('episode-%d.mp3' % i).st_size
     runtime = int(subprocess.check_output(['mp3info', '-p', '%S', 'episode-%d.mp3' % i]))
@@ -115,6 +115,12 @@ for d in episodes:
     elem = e.createElement('itunes:block')
     elem.appendChild(e.createTextNode('No'))
     e.documentElement.appendChild(elem)
+
+    # <itunes:episode>#</itunes:episode>
+    elem = e.createElement('itunes:episode')
+    elem.appendChild(e.createTextNode('%d' % i))
+    e.documentElement.appendChild(elem)
+
     channel_node.appendChild(e.documentElement)
 
 rss_xml = open('rss.xml', 'w')
