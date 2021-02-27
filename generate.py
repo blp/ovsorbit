@@ -1,6 +1,7 @@
 #! /usr/bin/python3
 
 import datetime
+import eyed3.core
 import xml.dom.minidom
 import os
 import subprocess
@@ -25,14 +26,14 @@ def get_elem(parent, name):
 
 rss_skel = parse_file('rss-skel.xml')
 episodes = []
-for i in range(1, 71):
+for i in range(1, 73):
     e = parse_file('episode-%d.xml' % i)
     size = os.stat('episode-%d.mp3' % i).st_size
-    runtime = int(subprocess.check_output(['mp3info', '-p', '%S', 'episode-%d.mp3' % i]))
+    runtime = eyed3.core.load('episode-%d.mp3' % i).info.time_secs
 
     # Check pubDate.
     pubdate = get_elem(e.documentElement, 'pubDate').childNodes[0].data
-    m = re.match('(Sun|Mon|Tue|Wed|Thu|Fri|Sat), ([0-3][0-9]) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (201[6-9]) ([0-9][0-9]:[0-9][0-9]:[0-9][0-9]) GMT$', pubdate)
+    m = re.match('(Sun|Mon|Tue|Wed|Thu|Fri|Sat), ([0-3][0-9]) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (20(?:2[01]|1[6-9])) ([0-9][0-9]:[0-9][0-9]:[0-9][0-9]) GMT$', pubdate)
     if not m:
         assert False
 
